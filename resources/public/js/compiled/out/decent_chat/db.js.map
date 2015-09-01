@@ -1,0 +1,1 @@
+{"version":3,"file":"\/home\/rozifus\/Work\/projects\/decent-chat\/resources\/public\/js\/compiled\/out\/decent_chat\/db.js","sources":["db.cljs?rel=1441122545718"],"lineCount":6,"mappings":";AAAA;;AAEA,4BAAA,2CAAA,vEAAKA,mIACQ,AAACC","names":["decent-chat.db\/default-db","cljs.core\/sorted-map"]}
