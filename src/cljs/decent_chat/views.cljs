@@ -1,7 +1,10 @@
 (ns decent-chat.views
-    (:require [reagent.core :as reagent :refer [atom]]
-              [re-frame.core :refer [subscribe dispatch]]
-              [re-com.core :as rc :refer-macros [handler-fn]]))
+    (:require 
+      [reagent.core :as reagent :refer [atom]]
+      [re-frame.core :refer [subscribe dispatch]]
+      [re-com.core :as rc :refer-macros [handler-fn]])
+    (:require-macros
+      [reagent.ratom :refer [reaction]]))
 
 (defn title []
   (let [name (subscribe [:name])]
@@ -27,18 +30,19 @@
     
 
 (defn input-box [value]
-  (fn []
-    [rc/box
-      :size "auto" 
-      :child [rc/input-textarea 
-               :model value
-               :width "100%"
-               :style {:resize "none"}
-               :on-change #(reset! value %)]]))
+  [rc/box
+    :size "auto" 
+    :child [rc/input-textarea 
+             :model value
+             :width "100%"
+             :style {:resize "none"}
+             :change-on-blur? false
+             :on-change #(reset! value %)]])
 
 
 (defn send-button [input-value]
-  (let [hover? (atom false)]
+  (let [hover? (atom false)
+        disabled? (reaction (= "" (clojure.string/trim @input-value)))]
     (fn []
       [rc/border 
        :border "1em solid white"
@@ -46,6 +50,7 @@
       [rc/button 
        :on-click #(do(dispatch [:send-message @input-value])
                      (reset! input-value ""))
+       :disabled? @disabled? 
        :style {:color "white"
                :background-color (if @hover? "#0072bb" "#4d90fe")}
        :attr {:on-mouse-over (handler-fn (reset! hover? true))
@@ -62,11 +67,10 @@
      :label "Latch"]]))
 
 (defn input-buttons [input-value]
-  (fn []
-    [rc/v-box 
-     :justify :end
-     :children [[latch-button]
-                [send-button input-value]]]))
+  [rc/v-box 
+   :justify :end
+   :children [[latch-button]
+              [send-button input-value]]])
 
 
         (comment [:button.send {:on-click #(dispatch [:send-message @value])} "send"])
