@@ -21,14 +21,16 @@
 (re-frame/register-handler
  :op/send-message
  (fn [app-state [_ content media]]
-   (println app-state)
    (let [id (allocate-next-id (-> app-state :data :messages))]
      (assoc-in app-state [:data :messages id] 
                {:id id :content content :media media}))))
 
 (re-frame/register-handler
  :ui/set-latch
- (fn [app-state [_ tf]]
-   (assoc-in app-state [:ui :state :latch] tf)))
+ (fn [app-state [_ latch? active?]]
+   (println active?)
+   (if active?
+     (assoc-in app-state [:ui :state :latch] latch?)
+     app-state)))
 
 

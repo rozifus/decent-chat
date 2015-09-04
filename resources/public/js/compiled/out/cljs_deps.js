@@ -49,9 +49,8 @@ goog.addDependency("../re_com/dropdown.js", ['re_com.dropdown'], ['re_com.util',
 goog.addDependency("../re_com/splits.js", ['re_com.splits'], ['re_com.util', 're_com.box', 'reagent.core', 'cljs.core', 're_com.validate']);
 goog.addDependency("../re_com/modal_panel.js", ['re_com.modal_panel'], ['cljs.core', 're_com.validate']);
 goog.addDependency("../re_com/core.js", ['re_com.core'], ['re_com.popover', 're_com.text', 're_com.box', 'cljs.core', 're_com.tabs', 're_com.alert', 're_com.datepicker', 're_com.input_time', 're_com.buttons', 're_com.tour', 're_com.selection_list', 're_com.dropdown', 're_com.misc', 're_com.splits', 're_com.modal_panel']);
-goog.addDependency("../decent_chat/views/input_panel.js", ['decent_chat.views.input_panel'], ['re_com.core', 'reagent.core', 'cljs.core', 're_frame.core']);
-goog.addDependency("../decent_chat/views/message_panel.js", ['decent_chat.views.message_panel'], ['re_com.core', 'reagent.core', 'cljs.core', 're_frame.core']);
-goog.addDependency("../decent_chat/views/main.js", ['decent_chat.views.main'], ['re_com.core', 'decent_chat.views.input_panel', 'reagent.core', 'cljs.core', 'decent_chat.views.message_panel', 're_frame.core']);
+goog.addDependency("../decent_chat/views/chat_panel.js", ['decent_chat.views.chat_panel'], ['re_com.core', 'reagent.core', 'cljs.core', 're_frame.core']);
+goog.addDependency("../decent_chat/views/main.js", ['decent_chat.views.main'], ['re_com.core', 'reagent.core', 'cljs.core', 'decent_chat.views.chat_panel', 're_frame.core']);
 goog.addDependency("../decent_chat/db.js", ['decent_chat.db'], ['cljs.core']);
 goog.addDependency("../decent_chat/handlers.js", ['decent_chat.handlers'], ['cljs.core', 'decent_chat.db', 're_frame.core']);
 goog.addDependency("../decent_chat/core.js", ['decent_chat.core'], ['decent_chat.views.main', 'reagent.core', 'cljs.core', 'decent_chat.subs', 'decent_chat.handlers', 're_frame.core']);

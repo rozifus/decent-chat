@@ -3,17 +3,9 @@
       [reagent.core :as reagent :refer [atom]]
       [re-frame.core :refer [subscribe dispatch]]
       [re-com.core :as rc :refer-macros [handler-fn]]
-      [decent-chat.views.input-panel :refer [input-panel]]
-      [decent-chat.views.message-panel :refer [message-panel]])
+      [decent-chat.views.chat-panel :refer [chat-panel]])
     (:require-macros
       [reagent.ratom :refer [reaction]]))
-
-(defn chat-panel []
-  (fn []
-     [rc/v-box 
-      :size "auto"
-      :children [[message-panel]
-                 [input-panel]]]))
 
 (defn options-panel []
   (fn []

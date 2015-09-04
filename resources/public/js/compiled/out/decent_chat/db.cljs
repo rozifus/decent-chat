@@ -9,7 +9,8 @@
 
 
 (def default-db
-  {:ui {:state {:latch false 
+  {:ui {:state {:latch true 
+                :ignore-scroll false
                 :input "" }
         :config {}}
    :data {:messages (sorted-map)}})
