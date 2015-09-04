@@ -1,6 +1,7 @@
 (ns decent-chat.handlers
-    (:require [re-frame.core :as re-frame]
-              [decent-chat.db :as db]))
+    (:require 
+      [re-frame.core :as re-frame]
+      [decent-chat.db :as db]))
 
 (enable-console-print!)
 
@@ -18,8 +19,16 @@
    db/default-db))
 
 (re-frame/register-handler
- :send-message
- (fn [app-state [_ text]]
-   (let [id (allocate-next-id (:messages app-state))]
-     (assoc-in app-state [:messages id] {:id id :content text}))))
+ :op/send-message
+ (fn [app-state [_ content media]]
+   (println app-state)
+   (let [id (allocate-next-id (-> app-state :data :messages))]
+     (assoc-in app-state [:data :messages id] 
+               {:id id :content content :media media}))))
+
+(re-frame/register-handler
+ :ui/set-latch
+ (fn [app-state [_ tf]]
+   (assoc-in app-state [:ui :state :latch] tf)))
+
 

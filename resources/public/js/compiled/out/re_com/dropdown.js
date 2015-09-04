@@ -26,8 +26,8 @@ return null;
 re_com.dropdown.choices_with_group_headings = (function re_com$dropdown$choices_with_group_headings(opts,group_fn){
 var groups = cljs.core.partition_by.call(null,group_fn,opts);
 var group_headers = cljs.core.map.call(null,((function (groups){
-return (function (p1__29168_SHARP_){
-return cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Keyword(null,"group","group",582596132)],[cljs.core.gensym.call(null),p1__29168_SHARP_]);
+return (function (p1__29175_SHARP_){
+return cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Keyword(null,"group","group",582596132)],[cljs.core.gensym.call(null),p1__29175_SHARP_]);
 });})(groups))
 ,cljs.core.map.call(null,group_fn,cljs.core.map.call(null,cljs.core.first,groups)));
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [group_headers,groups], null);
@@ -53,11 +53,11 @@ return cljs.core.filter.call(null,filter_fn,choices);
  */
 re_com.dropdown.filter_choices_regex = (function re_com$dropdown$filter_choices_regex(choices,group_fn,label_fn,filter_text){
 var re = (function (){try{return (new RegExp(filter_text,"i"));
-}catch (e29170){if((e29170 instanceof Object)){
-var e = e29170;
+}catch (e29177){if((e29177 instanceof Object)){
+var e = e29177;
 return null;
 } else {
-throw e29170;
+throw e29177;
 
 }
 }})();
@@ -191,11 +191,11 @@ return null;
 /**
  * Render a filter text box
  */
-re_com.dropdown.filter_text_box = cljs.core.with_meta.call(null,re_com.dropdown.filter_text_box_base,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"component-did-mount","component-did-mount",-1126910518),(function (p1__29171_SHARP_){
-var node = reagent.core.dom_node.call(null,p1__29171_SHARP_).firstChild;
+re_com.dropdown.filter_text_box = cljs.core.with_meta.call(null,re_com.dropdown.filter_text_box_base,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"component-did-mount","component-did-mount",-1126910518),(function (p1__29178_SHARP_){
+var node = reagent.core.dom_node.call(null,p1__29178_SHARP_).firstChild;
 return node.focus();
-}),new cljs.core.Keyword(null,"component-did-update","component-did-update",-1468549173),(function (p1__29172_SHARP_){
-var node = reagent.core.dom_node.call(null,p1__29172_SHARP_).firstChild;
+}),new cljs.core.Keyword(null,"component-did-update","component-did-update",-1468549173),(function (p1__29179_SHARP_){
+var node = reagent.core.dom_node.call(null,p1__29179_SHARP_).firstChild;
 return node.focus();
 })], null));
 /**
@@ -253,11 +253,11 @@ var argseq__19200__auto__ = ((((0) < arguments.length))?(new cljs.core.IndexedSe
 return re_com.dropdown.single_dropdown.cljs$core$IFn$_invoke$arity$variadic(argseq__19200__auto__);
 });
 
-re_com.dropdown.single_dropdown.cljs$core$IFn$_invoke$arity$variadic = (function (p__29177){
-var map__29178 = p__29177;
-var map__29178__$1 = ((cljs.core.seq_QMARK_.call(null,map__29178))?cljs.core.apply.call(null,cljs.core.hash_map,map__29178):map__29178);
-var args = map__29178__$1;
-var model = cljs.core.get.call(null,map__29178__$1,new cljs.core.Keyword(null,"model","model",331153215));
+re_com.dropdown.single_dropdown.cljs$core$IFn$_invoke$arity$variadic = (function (p__29184){
+var map__29185 = p__29184;
+var map__29185__$1 = ((cljs.core.seq_QMARK_.call(null,map__29185))?cljs.core.apply.call(null,cljs.core.hash_map,map__29185):map__29185);
+var args = map__29185__$1;
+var model = cljs.core.get.call(null,map__29185__$1,new cljs.core.Keyword(null,"model","model",331153215));
 if(cljs.core.truth_(((!(goog.DEBUG))?true:re_com.validate.validate_args.call(null,re_com.validate.extract_arg_data.call(null,re_com.dropdown.single_dropdown_args_desc),args,"single-dropdown")))){
 } else {
 throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"validate-args-macro","validate-args-macro",-1576181756,null),new cljs.core.Symbol(null,"single-dropdown-args-desc","single-dropdown-args-desc",1154344533,null),new cljs.core.Symbol(null,"args","args",-1338879193,null),"single-dropdown")))].join('')));
@@ -267,28 +267,28 @@ var external_model = reagent.core.atom.call(null,re_com.util.deref_or_value.call
 var internal_model = reagent.core.atom.call(null,cljs.core.deref.call(null,external_model));
 var drop_showing_QMARK_ = reagent.core.atom.call(null,false);
 var filter_text = reagent.core.atom.call(null,"");
-return ((function (external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
+return ((function (external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
 return (function() { 
-var G__29183__delegate = function (p__29179){
-var map__29180 = p__29179;
-var map__29180__$1 = ((cljs.core.seq_QMARK_.call(null,map__29180))?cljs.core.apply.call(null,cljs.core.hash_map,map__29180):map__29180);
-var args__$1 = map__29180__$1;
-var group_fn = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"group-fn","group-fn",129203707),new cljs.core.Keyword(null,"group","group",582596132));
-var disabled_QMARK_ = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181));
-var on_change = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
-var model__$1 = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"model","model",331153215));
-var attr = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
-var label_fn = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"label-fn","label-fn",-860923263),new cljs.core.Keyword(null,"label","label",1718410804));
-var tab_index = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"tab-index","tab-index",895755393));
-var max_height = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"max-height","max-height",-612563804));
-var placeholder = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"placeholder","placeholder",-104873083));
-var width = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"width","width",-384071477));
-var regex_filter_QMARK_ = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"regex-filter?","regex-filter?",-824895668));
-var choices = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"choices","choices",1385611597));
-var id_fn = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"id-fn","id-fn",316222798),new cljs.core.Keyword(null,"id","id",-1388402092));
-var style = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"style","style",-496642736));
-var class$ = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
-var filter_box_QMARK_ = cljs.core.get.call(null,map__29180__$1,new cljs.core.Keyword(null,"filter-box?","filter-box?",-1157583688));
+var G__29190__delegate = function (p__29186){
+var map__29187 = p__29186;
+var map__29187__$1 = ((cljs.core.seq_QMARK_.call(null,map__29187))?cljs.core.apply.call(null,cljs.core.hash_map,map__29187):map__29187);
+var args__$1 = map__29187__$1;
+var group_fn = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"group-fn","group-fn",129203707),new cljs.core.Keyword(null,"group","group",582596132));
+var disabled_QMARK_ = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181));
+var on_change = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
+var model__$1 = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"model","model",331153215));
+var attr = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
+var label_fn = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"label-fn","label-fn",-860923263),new cljs.core.Keyword(null,"label","label",1718410804));
+var tab_index = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"tab-index","tab-index",895755393));
+var max_height = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"max-height","max-height",-612563804));
+var placeholder = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"placeholder","placeholder",-104873083));
+var width = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"width","width",-384071477));
+var regex_filter_QMARK_ = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"regex-filter?","regex-filter?",-824895668));
+var choices = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"choices","choices",1385611597));
+var id_fn = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"id-fn","id-fn",316222798),new cljs.core.Keyword(null,"id","id",-1388402092));
+var style = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"style","style",-496642736));
+var class$ = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
+var filter_box_QMARK_ = cljs.core.get.call(null,map__29187__$1,new cljs.core.Keyword(null,"filter-box?","filter-box?",-1157583688));
 if(cljs.core.truth_(((!(goog.DEBUG))?true:re_com.validate.validate_args.call(null,re_com.validate.extract_arg_data.call(null,re_com.dropdown.single_dropdown_args_desc),args__$1,"single-dropdown")))){
 } else {
 throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"validate-args-macro","validate-args-macro",-1576181756,null),new cljs.core.Symbol(null,"single-dropdown-args-desc","single-dropdown-args-desc",1154344533,null),new cljs.core.Symbol(null,"args","args",-1338879193,null),"single-dropdown")))].join('')));
@@ -311,9 +311,9 @@ return cljs.core.not.call(null,disabled_QMARK___$1);
 return and__18148__auto__;
 }
 })();
-var callback = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
-return (function (p1__29173_SHARP_){
-cljs.core.reset_BANG_.call(null,internal_model,p1__29173_SHARP_);
+var callback = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
+return (function (p1__29180_SHARP_){
+cljs.core.reset_BANG_.call(null,internal_model,p1__29180_SHARP_);
 
 if(cljs.core.truth_(changeable_QMARK_)){
 on_change.call(null,cljs.core.deref.call(null,internal_model));
@@ -323,28 +323,28 @@ on_change.call(null,cljs.core.deref.call(null,internal_model));
 cljs.core.swap_BANG_.call(null,drop_showing_QMARK_,cljs.core.not);
 
 return cljs.core.reset_BANG_.call(null,filter_text,"");
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 ;
-var cancel = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
+var cancel = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
 return (function (){
 cljs.core.reset_BANG_.call(null,drop_showing_QMARK_,false);
 
 cljs.core.reset_BANG_.call(null,filter_text,"");
 
 return cljs.core.reset_BANG_.call(null,internal_model,cljs.core.deref.call(null,external_model));
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 ;
-var dropdown_click = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
+var dropdown_click = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
 return (function (){
 if(cljs.core.truth_(disabled_QMARK___$1)){
 return null;
 } else {
 return cljs.core.swap_BANG_.call(null,drop_showing_QMARK_,cljs.core.not);
 }
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 ;
 var filtered_choices = (cljs.core.truth_(regex_filter_QMARK___$1)?re_com.dropdown.filter_choices_regex.call(null,choices__$1,group_fn,label_fn,cljs.core.deref.call(null,filter_text)):re_com.dropdown.filter_choices.call(null,choices__$1,group_fn,label_fn,cljs.core.deref.call(null,filter_text)));
-var press_enter = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
+var press_enter = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
 return (function (){
 if(cljs.core.truth_(disabled_QMARK___$1)){
 cancel.call(null);
@@ -353,16 +353,16 @@ callback.call(null,cljs.core.deref.call(null,internal_model));
 }
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 ;
-var press_escape = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
+var press_escape = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
 return (function (){
 cancel.call(null);
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 ;
-var press_tab = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
+var press_tab = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
 return (function (){
 if(cljs.core.truth_(disabled_QMARK___$1)){
 cancel.call(null);
@@ -380,9 +380,9 @@ cljs.core.reset_BANG_.call(null,filter_text,"");
 cljs.core.reset_BANG_.call(null,drop_showing_QMARK_,false);
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 ;
-var press_up = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
+var press_up = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
 return (function (){
 if(cljs.core.truth_(cljs.core.deref.call(null,drop_showing_QMARK_))){
 cljs.core.reset_BANG_.call(null,internal_model,re_com.dropdown.move_to_new_choice.call(null,filtered_choices,id_fn,cljs.core.deref.call(null,internal_model),(-1)));
@@ -391,9 +391,9 @@ cljs.core.reset_BANG_.call(null,drop_showing_QMARK_,true);
 }
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 ;
-var press_down = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
+var press_down = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
 return (function (){
 if(cljs.core.truth_(cljs.core.deref.call(null,drop_showing_QMARK_))){
 cljs.core.reset_BANG_.call(null,internal_model,re_com.dropdown.move_to_new_choice.call(null,filtered_choices,id_fn,cljs.core.deref.call(null,internal_model),(1)));
@@ -402,29 +402,29 @@ cljs.core.reset_BANG_.call(null,drop_showing_QMARK_,true);
 }
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 ;
-var press_home = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
+var press_home = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
 return (function (){
 cljs.core.reset_BANG_.call(null,internal_model,re_com.dropdown.move_to_new_choice.call(null,filtered_choices,id_fn,cljs.core.deref.call(null,internal_model),new cljs.core.Keyword(null,"start","start",-355208981)));
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 ;
-var press_end = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
+var press_end = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
 return (function (){
 cljs.core.reset_BANG_.call(null,internal_model,re_com.dropdown.move_to_new_choice.call(null,filtered_choices,id_fn,cljs.core.deref.call(null,internal_model),new cljs.core.Keyword(null,"end","end",-268185958)));
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 ;
-var key_handler = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
-return (function (p1__29174_SHARP_){
+var key_handler = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
+return (function (p1__29181_SHARP_){
 if(cljs.core.truth_(disabled_QMARK___$1)){
 return false;
 } else {
-var G__29181 = p1__29174_SHARP_.which;
-switch (G__29181) {
+var G__29188 = p1__29181_SHARP_.which;
+switch (G__29188) {
 case (13):
 return press_enter.call(null);
 
@@ -458,7 +458,7 @@ return filter_box_QMARK_;
 
 }
 }
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 ;
 return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),cljs.core.merge.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"class","class",-2030961996),[cljs.core.str("rc-dropdown chosen-container chosen-container-single noselect "),cljs.core.str((cljs.core.truth_(cljs.core.deref.call(null,drop_showing_QMARK_))?"chosen-container-active chosen-with-drop ":null)),cljs.core.str(class$)].join(''),new cljs.core.Keyword(null,"style","style",-496642736),cljs.core.merge.call(null,re_com.box.flex_child_style.call(null,(cljs.core.truth_(width)?"0 0 auto":"auto")),re_com.box.align_style.call(null,new cljs.core.Keyword(null,"align-self","align-self",1475936794),new cljs.core.Keyword(null,"start","start",-355208981)),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"width","width",-384071477),(cljs.core.truth_(width)?width:null)], null),style)], null),attr),new cljs.core.PersistentVector(null, 11, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.dropdown.dropdown_top,internal_model,choices__$1,id_fn,label_fn,tab_index,placeholder,dropdown_click,key_handler,filter_box_QMARK_,drop_showing_QMARK_], null),(cljs.core.truth_((function (){var and__18148__auto__ = cljs.core.deref.call(null,drop_showing_QMARK_);
 if(cljs.core.truth_(and__18148__auto__)){
@@ -466,19 +466,19 @@ return cljs.core.not.call(null,disabled_QMARK___$1);
 } else {
 return and__18148__auto__;
 }
-})())?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.chosen-drop","div.chosen-drop",-1110109208),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.dropdown.filter_text_box,filter_box_QMARK_,filter_text,key_handler,drop_showing_QMARK_], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ul.chosen-results","ul.chosen-results",-932618517),(cljs.core.truth_(max_height)?new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"max-height","max-height",-612563804),max_height], null)], null):null),(((cljs.core.count.call(null,filtered_choices) > (0)))?(function (){var vec__29182 = re_com.dropdown.choices_with_group_headings.call(null,filtered_choices,group_fn);
-var group_names = cljs.core.nth.call(null,vec__29182,(0),null);
-var group_opt_lists = cljs.core.nth.call(null,vec__29182,(1),null);
+})())?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.chosen-drop","div.chosen-drop",-1110109208),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.dropdown.filter_text_box,filter_box_QMARK_,filter_text,key_handler,drop_showing_QMARK_], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ul.chosen-results","ul.chosen-results",-932618517),(cljs.core.truth_(max_height)?new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"max-height","max-height",-612563804),max_height], null)], null):null),(((cljs.core.count.call(null,filtered_choices) > (0)))?(function (){var vec__29189 = re_com.dropdown.choices_with_group_headings.call(null,filtered_choices,group_fn);
+var group_names = cljs.core.nth.call(null,vec__29189,(0),null);
+var group_opt_lists = cljs.core.nth.call(null,vec__29189,(1),null);
 var make_a_choice = cljs.core.partial.call(null,re_com.dropdown.make_choice_item,id_fn,label_fn,callback,internal_model);
-var make_choices = ((function (vec__29182,group_names,group_opt_lists,make_a_choice,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
-return (function (p1__29175_SHARP_){
-return cljs.core.map.call(null,make_a_choice,p1__29175_SHARP_);
-});})(vec__29182,group_names,group_opt_lists,make_a_choice,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+var make_choices = ((function (vec__29189,group_names,group_opt_lists,make_a_choice,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
+return (function (p1__29182_SHARP_){
+return cljs.core.map.call(null,make_a_choice,p1__29182_SHARP_);
+});})(vec__29189,group_names,group_opt_lists,make_a_choice,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 ;
-var make_h_then_choices = ((function (vec__29182,group_names,group_opt_lists,make_a_choice,make_choices,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model){
+var make_h_then_choices = ((function (vec__29189,group_names,group_opt_lists,make_a_choice,make_choices,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model){
 return (function (h,opts){
 return cljs.core.cons.call(null,re_com.dropdown.make_group_heading.call(null,h),make_choices.call(null,opts));
-});})(vec__29182,group_names,group_opt_lists,make_a_choice,make_choices,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__29180,map__29180__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+});})(vec__29189,group_names,group_opt_lists,make_a_choice,make_choices,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__29187,map__29187__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 ;
 var has_no_group_names_QMARK_ = (new cljs.core.Keyword(null,"group","group",582596132).cljs$core$IFn$_invoke$arity$1(cljs.core.first.call(null,group_names)) == null);
 if((cljs.core._EQ_.call(null,(1),cljs.core.count.call(null,group_opt_lists))) && (has_no_group_names_QMARK_)){
@@ -488,30 +488,30 @@ return cljs.core.apply.call(null,cljs.core.concat,cljs.core.map.call(null,make_h
 }
 })():new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li.no-results","li.no-results",-717682399),[cljs.core.str("No results match \""),cljs.core.str(cljs.core.deref.call(null,filter_text)),cljs.core.str("\"")].join('')], null))], null)], null):null)], null);
 };
-var G__29183 = function (var_args){
-var p__29179 = null;
+var G__29190 = function (var_args){
+var p__29186 = null;
 if (arguments.length > 0) {
-var G__29185__i = 0, G__29185__a = new Array(arguments.length -  0);
-while (G__29185__i < G__29185__a.length) {G__29185__a[G__29185__i] = arguments[G__29185__i + 0]; ++G__29185__i;}
-  p__29179 = new cljs.core.IndexedSeq(G__29185__a,0);
+var G__29192__i = 0, G__29192__a = new Array(arguments.length -  0);
+while (G__29192__i < G__29192__a.length) {G__29192__a[G__29192__i] = arguments[G__29192__i + 0]; ++G__29192__i;}
+  p__29186 = new cljs.core.IndexedSeq(G__29192__a,0);
 } 
-return G__29183__delegate.call(this,p__29179);};
-G__29183.cljs$lang$maxFixedArity = 0;
-G__29183.cljs$lang$applyTo = (function (arglist__29186){
-var p__29179 = cljs.core.seq(arglist__29186);
-return G__29183__delegate(p__29179);
+return G__29190__delegate.call(this,p__29186);};
+G__29190.cljs$lang$maxFixedArity = 0;
+G__29190.cljs$lang$applyTo = (function (arglist__29193){
+var p__29186 = cljs.core.seq(arglist__29193);
+return G__29190__delegate(p__29186);
 });
-G__29183.cljs$core$IFn$_invoke$arity$variadic = G__29183__delegate;
-return G__29183;
+G__29190.cljs$core$IFn$_invoke$arity$variadic = G__29190__delegate;
+return G__29190;
 })()
 ;
-;})(external_model,internal_model,drop_showing_QMARK_,filter_text,map__29178,map__29178__$1,args,model))
+;})(external_model,internal_model,drop_showing_QMARK_,filter_text,map__29185,map__29185__$1,args,model))
 });
 
 re_com.dropdown.single_dropdown.cljs$lang$maxFixedArity = (0);
 
-re_com.dropdown.single_dropdown.cljs$lang$applyTo = (function (seq29176){
-return re_com.dropdown.single_dropdown.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq29176));
+re_com.dropdown.single_dropdown.cljs$lang$applyTo = (function (seq29183){
+return re_com.dropdown.single_dropdown.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq29183));
 });
 
-//# sourceMappingURL=dropdown.js.map?rel=1441122549743
+//# sourceMappingURL=dropdown.js.map?rel=1441291723511

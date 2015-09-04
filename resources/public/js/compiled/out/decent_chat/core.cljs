@@ -3,10 +3,10 @@
               [re-frame.core :as re-frame]
               [decent-chat.handlers]
               [decent-chat.subs]
-              [decent-chat.views :as views]))
+              [decent-chat.views.main :refer [app-panel]]))
 
 (defn mount-root []
-  (reagent/render [views/app-panel]
+  (reagent/render [app-panel]
                   (.getElementById js/document "app")))
 
 (defn ^:export init [] 

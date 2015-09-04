@@ -1,2 +1,2 @@
 ;; Analyzed by ClojureScript 0.0-3211
-{:cljs.analyzer/constants {:order [:messages], :seen #{:messages}}, :imports nil, :requires {re-frame.core re-frame.core, re-frame re-frame.core}, :uses nil, :require-macros {reagent.ratom reagent.ratom}, :use-macros {reaction reagent.ratom}, :excludes #{}, :doc nil, :name decent-chat.subs}
+{:use-macros {reaction reagent.ratom}, :excludes #{}, :name decent-chat.subs, :imports nil, :requires {re-frame.core re-frame.core, re-frame re-frame.core}, :uses nil, :require-macros {reagent.ratom reagent.ratom}, :cljs.analyzer/constants {:order [:messages :data :ui/latch :ui :state :latch :ui/set-latch], :seen #{:ui/set-latch :latch :state :ui/latch :messages :ui :data}}, :doc nil}

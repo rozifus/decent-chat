@@ -23,8 +23,8 @@ cljs_time.core._EQ_ = cljs_time.internal.core._EQ_;
 /**
  * Interface for various date time functions
  */
-cljs_time.core.DateTimeProtocol = (function (){var obj29521 = {};
-return obj29521;
+cljs_time.core.DateTimeProtocol = (function (){var obj29528 = {};
+return obj29528;
 })();
 
 /**
@@ -466,8 +466,8 @@ throw cljs.core.missing_protocol.call(null,"DateTimeProtocol.last-day-of-the-mon
 /**
  * Interface for in-<time unit> functions
  */
-cljs_time.core.InTimeUnitProtocol = (function (){var obj29523 = {};
-return obj29523;
+cljs_time.core.InTimeUnitProtocol = (function (){var obj29530 = {};
+return obj29530;
 })();
 
 /**
@@ -729,11 +729,11 @@ var this__18755__auto____$1 = this;
 return cljs.core._lookup.call(null,this__18755__auto____$1,k__18756__auto__,null);
 });
 
-cljs_time.core.Interval.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__18757__auto__,k29525,else__18758__auto__){
+cljs_time.core.Interval.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__18757__auto__,k29532,else__18758__auto__){
 var self__ = this;
 var this__18757__auto____$1 = this;
-var G__29527 = (((k29525 instanceof cljs.core.Keyword))?k29525.fqn:null);
-switch (G__29527) {
+var G__29534 = (((k29532 instanceof cljs.core.Keyword))?k29532.fqn:null);
+switch (G__29534) {
 case "end":
 return self__.end;
 
@@ -743,7 +743,7 @@ return self__.start;
 
 break;
 default:
-return cljs.core.get.call(null,self__.__extmap,k29525,else__18758__auto__);
+return cljs.core.get.call(null,self__.__extmap,k29532,else__18758__auto__);
 
 }
 });
@@ -822,18 +822,18 @@ return (new cljs_time.core.Interval(self__.start,self__.end,self__.__meta,cljs.c
 }
 });
 
-cljs_time.core.Interval.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__18762__auto__,k__18763__auto__,G__29524){
+cljs_time.core.Interval.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__18762__auto__,k__18763__auto__,G__29531){
 var self__ = this;
 var this__18762__auto____$1 = this;
-var pred__29528 = cljs.core.keyword_identical_QMARK_;
-var expr__29529 = k__18763__auto__;
-if(cljs.core.truth_(pred__29528.call(null,new cljs.core.Keyword(null,"start","start",-355208981),expr__29529))){
-return (new cljs_time.core.Interval(G__29524,self__.end,self__.__meta,self__.__extmap,null));
+var pred__29535 = cljs.core.keyword_identical_QMARK_;
+var expr__29536 = k__18763__auto__;
+if(cljs.core.truth_(pred__29535.call(null,new cljs.core.Keyword(null,"start","start",-355208981),expr__29536))){
+return (new cljs_time.core.Interval(G__29531,self__.end,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_(pred__29528.call(null,new cljs.core.Keyword(null,"end","end",-268185958),expr__29529))){
-return (new cljs_time.core.Interval(self__.start,G__29524,self__.__meta,self__.__extmap,null));
+if(cljs.core.truth_(pred__29535.call(null,new cljs.core.Keyword(null,"end","end",-268185958),expr__29536))){
+return (new cljs_time.core.Interval(self__.start,G__29531,self__.__meta,self__.__extmap,null));
 } else {
-return (new cljs_time.core.Interval(self__.start,self__.end,self__.__meta,cljs.core.assoc.call(null,self__.__extmap,k__18763__auto__,G__29524),null));
+return (new cljs_time.core.Interval(self__.start,self__.end,self__.__meta,cljs.core.assoc.call(null,self__.__extmap,k__18763__auto__,G__29531),null));
 }
 }
 });
@@ -844,10 +844,10 @@ var this__18767__auto____$1 = this;
 return cljs.core.seq.call(null,cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"start","start",-355208981),self__.start],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"end","end",-268185958),self__.end],null))], null),self__.__extmap));
 });
 
-cljs_time.core.Interval.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__18754__auto__,G__29524){
+cljs_time.core.Interval.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__18754__auto__,G__29531){
 var self__ = this;
 var this__18754__auto____$1 = this;
-return (new cljs_time.core.Interval(self__.start,self__.end,G__29524,self__.__extmap,self__.__hash));
+return (new cljs_time.core.Interval(self__.start,self__.end,G__29531,self__.__extmap,self__.__hash));
 });
 
 cljs_time.core.Interval.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__18760__auto__,entry__18761__auto__){
@@ -874,8 +874,8 @@ cljs_time.core.__GT_Interval = (function cljs_time$core$__GT_Interval(start,end)
 return (new cljs_time.core.Interval(start,end,null,null,null));
 });
 
-cljs_time.core.map__GT_Interval = (function cljs_time$core$map__GT_Interval(G__29526){
-return (new cljs_time.core.Interval(new cljs.core.Keyword(null,"start","start",-355208981).cljs$core$IFn$_invoke$arity$1(G__29526),new cljs.core.Keyword(null,"end","end",-268185958).cljs$core$IFn$_invoke$arity$1(G__29526),null,cljs.core.dissoc.call(null,G__29526,new cljs.core.Keyword(null,"start","start",-355208981),new cljs.core.Keyword(null,"end","end",-268185958)),null));
+cljs_time.core.map__GT_Interval = (function cljs_time$core$map__GT_Interval(G__29533){
+return (new cljs_time.core.Interval(new cljs.core.Keyword(null,"start","start",-355208981).cljs$core$IFn$_invoke$arity$1(G__29533),new cljs.core.Keyword(null,"end","end",-268185958).cljs$core$IFn$_invoke$arity$1(G__29533),null,cljs.core.dissoc.call(null,G__29533,new cljs.core.Keyword(null,"start","start",-355208981),new cljs.core.Keyword(null,"end","end",-268185958)),null));
 });
 
 /**
@@ -929,11 +929,11 @@ var this__18755__auto____$1 = this;
 return cljs.core._lookup.call(null,this__18755__auto____$1,k__18756__auto__,null);
 });
 
-cljs_time.core.Period.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__18757__auto__,k29533,else__18758__auto__){
+cljs_time.core.Period.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__18757__auto__,k29540,else__18758__auto__){
 var self__ = this;
 var this__18757__auto____$1 = this;
-var G__29535 = (((k29533 instanceof cljs.core.Keyword))?k29533.fqn:null);
-switch (G__29535) {
+var G__29542 = (((k29540 instanceof cljs.core.Keyword))?k29540.fqn:null);
+switch (G__29542) {
 case "millis":
 return self__.millis;
 
@@ -967,7 +967,7 @@ return self__.years;
 
 break;
 default:
-return cljs.core.get.call(null,self__.__extmap,k29533,else__18758__auto__);
+return cljs.core.get.call(null,self__.__extmap,k29540,else__18758__auto__);
 
 }
 });
@@ -1046,36 +1046,36 @@ return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,self__
 }
 });
 
-cljs_time.core.Period.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__18762__auto__,k__18763__auto__,G__29532){
+cljs_time.core.Period.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__18762__auto__,k__18763__auto__,G__29539){
 var self__ = this;
 var this__18762__auto____$1 = this;
-var pred__29536 = cljs.core.keyword_identical_QMARK_;
-var expr__29537 = k__18763__auto__;
-if(cljs.core.truth_(pred__29536.call(null,new cljs.core.Keyword(null,"years","years",-1298579689),expr__29537))){
-return (new cljs_time.core.Period(G__29532,self__.months,self__.weeks,self__.days,self__.hours,self__.minutes,self__.seconds,self__.millis,self__.__meta,self__.__extmap,null));
+var pred__29543 = cljs.core.keyword_identical_QMARK_;
+var expr__29544 = k__18763__auto__;
+if(cljs.core.truth_(pred__29543.call(null,new cljs.core.Keyword(null,"years","years",-1298579689),expr__29544))){
+return (new cljs_time.core.Period(G__29539,self__.months,self__.weeks,self__.days,self__.hours,self__.minutes,self__.seconds,self__.millis,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_(pred__29536.call(null,new cljs.core.Keyword(null,"months","months",-45571637),expr__29537))){
-return (new cljs_time.core.Period(self__.years,G__29532,self__.weeks,self__.days,self__.hours,self__.minutes,self__.seconds,self__.millis,self__.__meta,self__.__extmap,null));
+if(cljs.core.truth_(pred__29543.call(null,new cljs.core.Keyword(null,"months","months",-45571637),expr__29544))){
+return (new cljs_time.core.Period(self__.years,G__29539,self__.weeks,self__.days,self__.hours,self__.minutes,self__.seconds,self__.millis,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_(pred__29536.call(null,new cljs.core.Keyword(null,"weeks","weeks",1844596125),expr__29537))){
-return (new cljs_time.core.Period(self__.years,self__.months,G__29532,self__.days,self__.hours,self__.minutes,self__.seconds,self__.millis,self__.__meta,self__.__extmap,null));
+if(cljs.core.truth_(pred__29543.call(null,new cljs.core.Keyword(null,"weeks","weeks",1844596125),expr__29544))){
+return (new cljs_time.core.Period(self__.years,self__.months,G__29539,self__.days,self__.hours,self__.minutes,self__.seconds,self__.millis,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_(pred__29536.call(null,new cljs.core.Keyword(null,"days","days",-1394072564),expr__29537))){
-return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,G__29532,self__.hours,self__.minutes,self__.seconds,self__.millis,self__.__meta,self__.__extmap,null));
+if(cljs.core.truth_(pred__29543.call(null,new cljs.core.Keyword(null,"days","days",-1394072564),expr__29544))){
+return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,G__29539,self__.hours,self__.minutes,self__.seconds,self__.millis,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_(pred__29536.call(null,new cljs.core.Keyword(null,"hours","hours",58380855),expr__29537))){
-return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,self__.days,G__29532,self__.minutes,self__.seconds,self__.millis,self__.__meta,self__.__extmap,null));
+if(cljs.core.truth_(pred__29543.call(null,new cljs.core.Keyword(null,"hours","hours",58380855),expr__29544))){
+return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,self__.days,G__29539,self__.minutes,self__.seconds,self__.millis,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_(pred__29536.call(null,new cljs.core.Keyword(null,"minutes","minutes",1319166394),expr__29537))){
-return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,self__.days,self__.hours,G__29532,self__.seconds,self__.millis,self__.__meta,self__.__extmap,null));
+if(cljs.core.truth_(pred__29543.call(null,new cljs.core.Keyword(null,"minutes","minutes",1319166394),expr__29544))){
+return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,self__.days,self__.hours,G__29539,self__.seconds,self__.millis,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_(pred__29536.call(null,new cljs.core.Keyword(null,"seconds","seconds",-445266194),expr__29537))){
-return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,self__.days,self__.hours,self__.minutes,G__29532,self__.millis,self__.__meta,self__.__extmap,null));
+if(cljs.core.truth_(pred__29543.call(null,new cljs.core.Keyword(null,"seconds","seconds",-445266194),expr__29544))){
+return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,self__.days,self__.hours,self__.minutes,G__29539,self__.millis,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_(pred__29536.call(null,new cljs.core.Keyword(null,"millis","millis",-1338288387),expr__29537))){
-return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,self__.days,self__.hours,self__.minutes,self__.seconds,G__29532,self__.__meta,self__.__extmap,null));
+if(cljs.core.truth_(pred__29543.call(null,new cljs.core.Keyword(null,"millis","millis",-1338288387),expr__29544))){
+return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,self__.days,self__.hours,self__.minutes,self__.seconds,G__29539,self__.__meta,self__.__extmap,null));
 } else {
-return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,self__.days,self__.hours,self__.minutes,self__.seconds,self__.millis,self__.__meta,cljs.core.assoc.call(null,self__.__extmap,k__18763__auto__,G__29532),null));
+return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,self__.days,self__.hours,self__.minutes,self__.seconds,self__.millis,self__.__meta,cljs.core.assoc.call(null,self__.__extmap,k__18763__auto__,G__29539),null));
 }
 }
 }
@@ -1092,10 +1092,10 @@ var this__18767__auto____$1 = this;
 return cljs.core.seq.call(null,cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"years","years",-1298579689),self__.years],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"months","months",-45571637),self__.months],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"weeks","weeks",1844596125),self__.weeks],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"days","days",-1394072564),self__.days],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"hours","hours",58380855),self__.hours],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"minutes","minutes",1319166394),self__.minutes],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"seconds","seconds",-445266194),self__.seconds],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"millis","millis",-1338288387),self__.millis],null))], null),self__.__extmap));
 });
 
-cljs_time.core.Period.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__18754__auto__,G__29532){
+cljs_time.core.Period.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__18754__auto__,G__29539){
 var self__ = this;
 var this__18754__auto____$1 = this;
-return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,self__.days,self__.hours,self__.minutes,self__.seconds,self__.millis,G__29532,self__.__extmap,self__.__hash));
+return (new cljs_time.core.Period(self__.years,self__.months,self__.weeks,self__.days,self__.hours,self__.minutes,self__.seconds,self__.millis,G__29539,self__.__extmap,self__.__hash));
 });
 
 cljs_time.core.Period.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__18760__auto__,entry__18761__auto__){
@@ -1122,13 +1122,13 @@ cljs_time.core.__GT_Period = (function cljs_time$core$__GT_Period(years,months,w
 return (new cljs_time.core.Period(years,months,weeks,days,hours,minutes,seconds,millis,null,null,null));
 });
 
-cljs_time.core.map__GT_Period = (function cljs_time$core$map__GT_Period(G__29534){
-return (new cljs_time.core.Period(new cljs.core.Keyword(null,"years","years",-1298579689).cljs$core$IFn$_invoke$arity$1(G__29534),new cljs.core.Keyword(null,"months","months",-45571637).cljs$core$IFn$_invoke$arity$1(G__29534),new cljs.core.Keyword(null,"weeks","weeks",1844596125).cljs$core$IFn$_invoke$arity$1(G__29534),new cljs.core.Keyword(null,"days","days",-1394072564).cljs$core$IFn$_invoke$arity$1(G__29534),new cljs.core.Keyword(null,"hours","hours",58380855).cljs$core$IFn$_invoke$arity$1(G__29534),new cljs.core.Keyword(null,"minutes","minutes",1319166394).cljs$core$IFn$_invoke$arity$1(G__29534),new cljs.core.Keyword(null,"seconds","seconds",-445266194).cljs$core$IFn$_invoke$arity$1(G__29534),new cljs.core.Keyword(null,"millis","millis",-1338288387).cljs$core$IFn$_invoke$arity$1(G__29534),null,cljs.core.dissoc.call(null,G__29534,new cljs.core.Keyword(null,"years","years",-1298579689),new cljs.core.Keyword(null,"months","months",-45571637),new cljs.core.Keyword(null,"weeks","weeks",1844596125),new cljs.core.Keyword(null,"days","days",-1394072564),new cljs.core.Keyword(null,"hours","hours",58380855),new cljs.core.Keyword(null,"minutes","minutes",1319166394),new cljs.core.Keyword(null,"seconds","seconds",-445266194),new cljs.core.Keyword(null,"millis","millis",-1338288387)),null));
+cljs_time.core.map__GT_Period = (function cljs_time$core$map__GT_Period(G__29541){
+return (new cljs_time.core.Period(new cljs.core.Keyword(null,"years","years",-1298579689).cljs$core$IFn$_invoke$arity$1(G__29541),new cljs.core.Keyword(null,"months","months",-45571637).cljs$core$IFn$_invoke$arity$1(G__29541),new cljs.core.Keyword(null,"weeks","weeks",1844596125).cljs$core$IFn$_invoke$arity$1(G__29541),new cljs.core.Keyword(null,"days","days",-1394072564).cljs$core$IFn$_invoke$arity$1(G__29541),new cljs.core.Keyword(null,"hours","hours",58380855).cljs$core$IFn$_invoke$arity$1(G__29541),new cljs.core.Keyword(null,"minutes","minutes",1319166394).cljs$core$IFn$_invoke$arity$1(G__29541),new cljs.core.Keyword(null,"seconds","seconds",-445266194).cljs$core$IFn$_invoke$arity$1(G__29541),new cljs.core.Keyword(null,"millis","millis",-1338288387).cljs$core$IFn$_invoke$arity$1(G__29541),null,cljs.core.dissoc.call(null,G__29541,new cljs.core.Keyword(null,"years","years",-1298579689),new cljs.core.Keyword(null,"months","months",-45571637),new cljs.core.Keyword(null,"weeks","weeks",1844596125),new cljs.core.Keyword(null,"days","days",-1394072564),new cljs.core.Keyword(null,"hours","hours",58380855),new cljs.core.Keyword(null,"minutes","minutes",1319166394),new cljs.core.Keyword(null,"seconds","seconds",-445266194),new cljs.core.Keyword(null,"millis","millis",-1338288387)),null));
 });
 
 cljs_time.core.period = (function cljs_time$core$period(){
-var G__29544 = arguments.length;
-switch (G__29544) {
+var G__29551 = arguments.length;
+switch (G__29551) {
 case 2:
 return cljs_time.core.period.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -1148,12 +1148,12 @@ cljs_time.core.period.cljs$core$IFn$_invoke$arity$variadic = (function (p1,v1,kv
 return cljs.core.apply.call(null,cljs.core.assoc,cljs_time.core.period.call(null,p1,v1),kvs);
 });
 
-cljs_time.core.period.cljs$lang$applyTo = (function (seq29540){
-var G__29541 = cljs.core.first.call(null,seq29540);
-var seq29540__$1 = cljs.core.next.call(null,seq29540);
-var G__29542 = cljs.core.first.call(null,seq29540__$1);
-var seq29540__$2 = cljs.core.next.call(null,seq29540__$1);
-return cljs_time.core.period.cljs$core$IFn$_invoke$arity$variadic(G__29541,G__29542,seq29540__$2);
+cljs_time.core.period.cljs$lang$applyTo = (function (seq29547){
+var G__29548 = cljs.core.first.call(null,seq29547);
+var seq29547__$1 = cljs.core.next.call(null,seq29547);
+var G__29549 = cljs.core.first.call(null,seq29547__$1);
+var seq29547__$2 = cljs.core.next.call(null,seq29547__$1);
+return cljs_time.core.period.cljs$core$IFn$_invoke$arity$variadic(G__29548,G__29549,seq29547__$2);
 });
 
 cljs_time.core.period.cljs$lang$maxFixedArity = (2);
@@ -1167,24 +1167,24 @@ set_fn.call(null,date__$1,op.call(null,f.call(null,date__$1),value));
 return date__$1;
 });
 return new cljs.core.PersistentArrayMap(null, 8, [new cljs.core.Keyword(null,"millis","millis",-1338288387),cljs.core.partial.call(null,fixed_time_fn,cljs_time.core.milli,((function (fixed_time_fn){
-return (function (p1__29546_SHARP_,p2__29547_SHARP_){
-return p1__29546_SHARP_.setMilliseconds(p2__29547_SHARP_);
+return (function (p1__29553_SHARP_,p2__29554_SHARP_){
+return p1__29553_SHARP_.setMilliseconds(p2__29554_SHARP_);
 });})(fixed_time_fn))
 ),new cljs.core.Keyword(null,"seconds","seconds",-445266194),cljs.core.partial.call(null,fixed_time_fn,cljs_time.core.second,((function (fixed_time_fn){
-return (function (p1__29548_SHARP_,p2__29549_SHARP_){
-return p1__29548_SHARP_.setSeconds(p2__29549_SHARP_);
+return (function (p1__29555_SHARP_,p2__29556_SHARP_){
+return p1__29555_SHARP_.setSeconds(p2__29556_SHARP_);
 });})(fixed_time_fn))
 ),new cljs.core.Keyword(null,"minutes","minutes",1319166394),cljs.core.partial.call(null,fixed_time_fn,cljs_time.core.minute,((function (fixed_time_fn){
-return (function (p1__29550_SHARP_,p2__29551_SHARP_){
-return p1__29550_SHARP_.setMinutes(p2__29551_SHARP_);
+return (function (p1__29557_SHARP_,p2__29558_SHARP_){
+return p1__29557_SHARP_.setMinutes(p2__29558_SHARP_);
 });})(fixed_time_fn))
 ),new cljs.core.Keyword(null,"hours","hours",58380855),cljs.core.partial.call(null,fixed_time_fn,cljs_time.core.hour,((function (fixed_time_fn){
-return (function (p1__29552_SHARP_,p2__29553_SHARP_){
-return p1__29552_SHARP_.setHours(p2__29553_SHARP_);
+return (function (p1__29559_SHARP_,p2__29560_SHARP_){
+return p1__29559_SHARP_.setHours(p2__29560_SHARP_);
 });})(fixed_time_fn))
 ),new cljs.core.Keyword(null,"days","days",-1394072564),cljs.core.partial.call(null,fixed_time_fn,cljs_time.core.day,((function (fixed_time_fn){
-return (function (p1__29554_SHARP_,p2__29555_SHARP_){
-return p1__29554_SHARP_.setDate(p2__29555_SHARP_);
+return (function (p1__29561_SHARP_,p2__29562_SHARP_){
+return p1__29561_SHARP_.setDate(p2__29562_SHARP_);
 });})(fixed_time_fn))
 ),new cljs.core.Keyword(null,"weeks","weeks",1844596125),((function (fixed_time_fn){
 return (function (op,date,value){
@@ -1200,26 +1200,26 @@ return date__$1;
 return (function (op,date,value){
 var date__$1 = date.clone();
 if(cljs.core.truth_(value)){
-var m_29556 = op.call(null,cljs_time.core.month.call(null,date__$1),value);
-var y_29557 = cljs_time.core.year.call(null,date__$1);
-var y_29558__$1 = (((m_29556 > (0)))?(y_29557 + (((m_29556 - (1)) / (12)) | (0))):(((m_29556 < (0)))?(y_29557 + (((m_29556 - (1)) / (12)) | (0))):(((m_29556 === (0)))?(y_29557 - (1)):null)));
-var m_29559__$1 = (((m_29556 > (12)))?(function (){var m__$1 = cljs.core.mod.call(null,m_29556,(12));
+var m_29563 = op.call(null,cljs_time.core.month.call(null,date__$1),value);
+var y_29564 = cljs_time.core.year.call(null,date__$1);
+var y_29565__$1 = (((m_29563 > (0)))?(y_29564 + (((m_29563 - (1)) / (12)) | (0))):(((m_29563 < (0)))?(y_29564 + (((m_29563 - (1)) / (12)) | (0))):(((m_29563 === (0)))?(y_29564 - (1)):null)));
+var m_29566__$1 = (((m_29563 > (12)))?(function (){var m__$1 = cljs.core.mod.call(null,m_29563,(12));
 if((m__$1 === (0))){
 return (12);
 } else {
 return m__$1;
 }
-})():(((m_29556 < (1)))?(m_29556 + (12)):m_29556
+})():(((m_29563 < (1)))?(m_29563 + (12)):m_29563
 ));
-var ldom_29560 = cljs_time.core.day.call(null,cljs_time.core.last_day_of_the_month_.call(null,(new goog.date.Date(y_29558__$1,(m_29559__$1 - (1)),(1)))));
-if((ldom_29560 < cljs_time.core.day.call(null,date__$1))){
-date__$1.setDate(ldom_29560);
+var ldom_29567 = cljs_time.core.day.call(null,cljs_time.core.last_day_of_the_month_.call(null,(new goog.date.Date(y_29565__$1,(m_29566__$1 - (1)),(1)))));
+if((ldom_29567 < cljs_time.core.day.call(null,date__$1))){
+date__$1.setDate(ldom_29567);
 } else {
 }
 
-date__$1.setMonth((m_29559__$1 - (1)));
+date__$1.setMonth((m_29566__$1 - (1)));
 
-date__$1.setYear(y_29558__$1);
+date__$1.setYear(y_29565__$1);
 } else {
 }
 
@@ -1255,10 +1255,10 @@ return date__$1;
 })();
 cljs_time.core.period_fn = (function cljs_time$core$period_fn(p){
 return (function (operator,date){
-return cljs.core.reduce.call(null,(function (d,p__29563){
-var vec__29564 = p__29563;
-var k = cljs.core.nth.call(null,vec__29564,(0),null);
-var v = cljs.core.nth.call(null,vec__29564,(1),null);
+return cljs.core.reduce.call(null,(function (d,p__29570){
+var vec__29571 = p__29570;
+var k = cljs.core.nth.call(null,vec__29571,(0),null);
+var v = cljs.core.nth.call(null,vec__29571,(1),null);
 return cljs_time.core.periods.call(null,k).call(null,operator,d,v);
 }),date,p);
 });
@@ -1514,33 +1514,33 @@ cljs_time.core._STAR_ms_fn_STAR_ = cljs_time.core.default_ms_fn.call(null);
  * Returns a DateTime for the current instant in the UTC time zone.
  */
 cljs_time.core.now = (function cljs_time$core$now(){
-var G__29566 = (new goog.date.UtcDateTime());
-G__29566.setTime(cljs_time.core._STAR_ms_fn_STAR_.call(null));
+var G__29573 = (new goog.date.UtcDateTime());
+G__29573.setTime(cljs_time.core._STAR_ms_fn_STAR_.call(null));
 
-return G__29566;
+return G__29573;
 });
 /**
  * Returns a local DateTime for the current instant without date or time zone
  * in the current time zone.
  */
 cljs_time.core.time_now = (function cljs_time$core$time_now(){
-var G__29568 = (new goog.date.DateTime());
-G__29568.setTime(cljs_time.core._STAR_ms_fn_STAR_.call(null));
+var G__29575 = (new goog.date.DateTime());
+G__29575.setTime(cljs_time.core._STAR_ms_fn_STAR_.call(null));
 
-return G__29568;
+return G__29575;
 });
 cljs_time.core.at_midnight = (function cljs_time$core$at_midnight(datetime){
 var datetime__$1 = datetime.clone();
-var G__29570 = datetime__$1;
-G__29570.setHours((0));
+var G__29577 = datetime__$1;
+G__29577.setHours((0));
 
-G__29570.setMinutes((0));
+G__29577.setMinutes((0));
 
-G__29570.setSeconds((0));
+G__29577.setSeconds((0));
 
-G__29570.setMilliseconds((0));
+G__29577.setMilliseconds((0));
 
-return G__29570;
+return G__29577;
 });
 /**
  * Returns a DateTime for today at midnight in the UTC time zone.
@@ -1552,10 +1552,10 @@ return cljs_time.core.at_midnight.call(null,cljs_time.core.now.call(null));
  * Returns a DateTime for the begining of the Unix epoch in the UTC time zone.
  */
 cljs_time.core.epoch = (function cljs_time$core$epoch(){
-var G__29572 = (new goog.date.UtcDateTime());
-G__29572.setTime((0));
+var G__29579 = (new goog.date.UtcDateTime());
+G__29579.setTime((0));
 
-return G__29572;
+return G__29579;
 });
 /**
  * Constructs and returns a new DateTime at midnight in UTC.
@@ -1565,8 +1565,8 @@ return G__29572;
  * which case they will default to 1.
  */
 cljs_time.core.date_midnight = (function cljs_time$core$date_midnight(){
-var G__29574 = arguments.length;
-switch (G__29574) {
+var G__29581 = arguments.length;
+switch (G__29581) {
 case 1:
 return cljs_time.core.date_midnight.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -1609,8 +1609,8 @@ cljs_time.core.date_midnight.cljs$lang$maxFixedArity = 3;
  * they will default to 1 or 0 as appropriate.
  */
 cljs_time.core.date_time = (function cljs_time$core$date_time(){
-var G__29577 = arguments.length;
-switch (G__29577) {
+var G__29584 = arguments.length;
+switch (G__29584) {
 case 1:
 return cljs_time.core.date_time.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -1683,8 +1683,8 @@ cljs_time.core.date_time.cljs$lang$maxFixedArity = 7;
  * they will default to 1 or 0 as appropriate.
  */
 cljs_time.core.local_date_time = (function cljs_time$core$local_date_time(){
-var G__29580 = arguments.length;
-switch (G__29580) {
+var G__29587 = arguments.length;
+switch (G__29587) {
 case 1:
 return cljs_time.core.local_date_time.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -1760,18 +1760,18 @@ return (new goog.date.Date(year,(month - (1)),day));
  * local DateTime objects do not deal with timezones at all.
  */
 cljs_time.core.today = (function cljs_time$core$today(){
-var G__29583 = (new goog.date.Date());
-G__29583.setTime(cljs_time.core._STAR_ms_fn_STAR_.call(null));
+var G__29590 = (new goog.date.Date());
+G__29590.setTime(cljs_time.core._STAR_ms_fn_STAR_.call(null));
 
-return G__29583;
+return G__29590;
 });
 /**
  * Returns a timezone map for the given offset, specified either in hours or
  * hours and minutes.
  */
 cljs_time.core.time_zone_for_offset = (function cljs_time$core$time_zone_for_offset(){
-var G__29585 = arguments.length;
-switch (G__29585) {
+var G__29592 = arguments.length;
+switch (G__29592) {
 case 1:
 return cljs_time.core.time_zone_for_offset.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -1809,10 +1809,10 @@ cljs_time.core.time_zone_for_offset.cljs$lang$maxFixedArity = 2;
  * Returns the default timezone map for the current environment.
  */
 cljs_time.core.default_time_zone = (function cljs_time$core$default_time_zone(){
-var offset = (function (){var G__29588 = (new goog.date.DateTime());
-G__29588.setTime(cljs_time.core._STAR_ms_fn_STAR_.call(null));
+var offset = (function (){var G__29595 = (new goog.date.DateTime());
+G__29595.setTime(cljs_time.core._STAR_ms_fn_STAR_.call(null));
 
-return G__29588;
+return G__29595;
 })().getTimezoneOffset();
 var hours = (((-1) * offset) / (60));
 return cljs_time.core.time_zone_for_offset.call(null,(hours | (0)),cljs.core.mod.call(null,hours,(1)));
@@ -1845,8 +1845,8 @@ return (new goog.date.DateTime(dt.getYear(),dt.getMonth(),dt.getDate(),dt.getHou
  * Without an argument, returns a Period representing only years.
  */
 cljs_time.core.years = (function cljs_time$core$years(){
-var G__29590 = arguments.length;
-switch (G__29590) {
+var G__29597 = arguments.length;
+switch (G__29597) {
 case 0:
 return cljs_time.core.years.cljs$core$IFn$_invoke$arity$0();
 
@@ -1875,8 +1875,8 @@ cljs_time.core.years.cljs$lang$maxFixedArity = 1;
  * Without an argument, returns a Period representing only months.
  */
 cljs_time.core.months = (function cljs_time$core$months(){
-var G__29593 = arguments.length;
-switch (G__29593) {
+var G__29600 = arguments.length;
+switch (G__29600) {
 case 0:
 return cljs_time.core.months.cljs$core$IFn$_invoke$arity$0();
 
@@ -1905,8 +1905,8 @@ cljs_time.core.months.cljs$lang$maxFixedArity = 1;
  * Without an argument, returns a Period representing only weeks.
  */
 cljs_time.core.weeks = (function cljs_time$core$weeks(){
-var G__29596 = arguments.length;
-switch (G__29596) {
+var G__29603 = arguments.length;
+switch (G__29603) {
 case 0:
 return cljs_time.core.weeks.cljs$core$IFn$_invoke$arity$0();
 
@@ -1935,8 +1935,8 @@ cljs_time.core.weeks.cljs$lang$maxFixedArity = 1;
  * Without an argument, returns a Period representing only days.
  */
 cljs_time.core.days = (function cljs_time$core$days(){
-var G__29599 = arguments.length;
-switch (G__29599) {
+var G__29606 = arguments.length;
+switch (G__29606) {
 case 0:
 return cljs_time.core.days.cljs$core$IFn$_invoke$arity$0();
 
@@ -1965,8 +1965,8 @@ cljs_time.core.days.cljs$lang$maxFixedArity = 1;
  * Without an argument, returns a Period representing only hours.
  */
 cljs_time.core.hours = (function cljs_time$core$hours(){
-var G__29602 = arguments.length;
-switch (G__29602) {
+var G__29609 = arguments.length;
+switch (G__29609) {
 case 0:
 return cljs_time.core.hours.cljs$core$IFn$_invoke$arity$0();
 
@@ -1995,8 +1995,8 @@ cljs_time.core.hours.cljs$lang$maxFixedArity = 1;
  * Without an argument, returns a Period representing only minutes.
  */
 cljs_time.core.minutes = (function cljs_time$core$minutes(){
-var G__29605 = arguments.length;
-switch (G__29605) {
+var G__29612 = arguments.length;
+switch (G__29612) {
 case 0:
 return cljs_time.core.minutes.cljs$core$IFn$_invoke$arity$0();
 
@@ -2025,8 +2025,8 @@ cljs_time.core.minutes.cljs$lang$maxFixedArity = 1;
  * Without an argument, returns a Period representing only seconds.
  */
 cljs_time.core.seconds = (function cljs_time$core$seconds(){
-var G__29608 = arguments.length;
-switch (G__29608) {
+var G__29615 = arguments.length;
+switch (G__29615) {
 case 0:
 return cljs_time.core.seconds.cljs$core$IFn$_invoke$arity$0();
 
@@ -2055,8 +2055,8 @@ cljs_time.core.seconds.cljs$lang$maxFixedArity = 1;
  * Without an argument, returns a Period representing only milliseconds.
  */
 cljs_time.core.millis = (function cljs_time$core$millis(){
-var G__29611 = arguments.length;
-switch (G__29611) {
+var G__29618 = arguments.length;
+switch (G__29618) {
 case 0:
 return cljs_time.core.millis.cljs$core$IFn$_invoke$arity$0();
 
@@ -2085,8 +2085,8 @@ cljs_time.core.millis.cljs$lang$maxFixedArity = 1;
  * forwards by the given Period(s).
  */
 cljs_time.core.plus = (function cljs_time$core$plus(){
-var G__29617 = arguments.length;
-switch (G__29617) {
+var G__29624 = arguments.length;
+switch (G__29624) {
 case 2:
 return cljs_time.core.plus.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -2106,12 +2106,12 @@ cljs_time.core.plus.cljs$core$IFn$_invoke$arity$variadic = (function (dt,p,ps){
 return cljs.core.reduce.call(null,cljs_time.core.plus_,cljs_time.core.plus_.call(null,dt,p),ps);
 });
 
-cljs_time.core.plus.cljs$lang$applyTo = (function (seq29613){
-var G__29614 = cljs.core.first.call(null,seq29613);
-var seq29613__$1 = cljs.core.next.call(null,seq29613);
-var G__29615 = cljs.core.first.call(null,seq29613__$1);
-var seq29613__$2 = cljs.core.next.call(null,seq29613__$1);
-return cljs_time.core.plus.cljs$core$IFn$_invoke$arity$variadic(G__29614,G__29615,seq29613__$2);
+cljs_time.core.plus.cljs$lang$applyTo = (function (seq29620){
+var G__29621 = cljs.core.first.call(null,seq29620);
+var seq29620__$1 = cljs.core.next.call(null,seq29620);
+var G__29622 = cljs.core.first.call(null,seq29620__$1);
+var seq29620__$2 = cljs.core.next.call(null,seq29620__$1);
+return cljs_time.core.plus.cljs$core$IFn$_invoke$arity$variadic(G__29621,G__29622,seq29620__$2);
 });
 
 cljs_time.core.plus.cljs$lang$maxFixedArity = (2);
@@ -2120,8 +2120,8 @@ cljs_time.core.plus.cljs$lang$maxFixedArity = (2);
  * moved backwards by the given Period(s).
  */
 cljs_time.core.minus = (function cljs_time$core$minus(){
-var G__29623 = arguments.length;
-switch (G__29623) {
+var G__29630 = arguments.length;
+switch (G__29630) {
 case 2:
 return cljs_time.core.minus.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -2141,12 +2141,12 @@ cljs_time.core.minus.cljs$core$IFn$_invoke$arity$variadic = (function (dt,p,ps){
 return cljs.core.reduce.call(null,cljs_time.core.minus_,cljs_time.core.minus_.call(null,dt,p),ps);
 });
 
-cljs_time.core.minus.cljs$lang$applyTo = (function (seq29619){
-var G__29620 = cljs.core.first.call(null,seq29619);
-var seq29619__$1 = cljs.core.next.call(null,seq29619);
-var G__29621 = cljs.core.first.call(null,seq29619__$1);
-var seq29619__$2 = cljs.core.next.call(null,seq29619__$1);
-return cljs_time.core.minus.cljs$core$IFn$_invoke$arity$variadic(G__29620,G__29621,seq29619__$2);
+cljs_time.core.minus.cljs$lang$applyTo = (function (seq29626){
+var G__29627 = cljs.core.first.call(null,seq29626);
+var seq29626__$1 = cljs.core.next.call(null,seq29626);
+var G__29628 = cljs.core.first.call(null,seq29626__$1);
+var seq29626__$2 = cljs.core.next.call(null,seq29626__$1);
+return cljs_time.core.minus.cljs$core$IFn$_invoke$arity$variadic(G__29627,G__29628,seq29626__$2);
 });
 
 cljs_time.core.minus.cljs$lang$maxFixedArity = (2);
@@ -2175,8 +2175,8 @@ return cljs_time.core.plus.call(null,cljs_time.core.now.call(null),period);
  * Returns the earliest of the supplied DateTimes
  */
 cljs_time.core.earliest = (function cljs_time$core$earliest(){
-var G__29626 = arguments.length;
-switch (G__29626) {
+var G__29633 = arguments.length;
+switch (G__29633) {
 case 2:
 return cljs_time.core.earliest.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -2208,8 +2208,8 @@ cljs_time.core.earliest.cljs$lang$maxFixedArity = 2;
  * Returns the latest of the supplied DateTimes
  */
 cljs_time.core.latest = (function cljs_time$core$latest(){
-var G__29629 = arguments.length;
-switch (G__29629) {
+var G__29636 = arguments.length;
+switch (G__29636) {
 case 2:
 return cljs_time.core.latest.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -2264,29 +2264,29 @@ return cljs.core.assoc.call(null,in$,new cljs.core.Keyword(null,"end","end",-268
 
 cljs_time.core.extend.cljs$lang$maxFixedArity = (1);
 
-cljs_time.core.extend.cljs$lang$applyTo = (function (seq29631){
-var G__29632 = cljs.core.first.call(null,seq29631);
-var seq29631__$1 = cljs.core.next.call(null,seq29631);
-return cljs_time.core.extend.cljs$core$IFn$_invoke$arity$variadic(G__29632,seq29631__$1);
+cljs_time.core.extend.cljs$lang$applyTo = (function (seq29638){
+var G__29639 = cljs.core.first.call(null,seq29638);
+var seq29638__$1 = cljs.core.next.call(null,seq29638);
+return cljs_time.core.extend.cljs$core$IFn$_invoke$arity$variadic(G__29639,seq29638__$1);
 });
-cljs_time.core.month_range = (function cljs_time$core$month_range(p__29635){
-var map__29637 = p__29635;
-var map__29637__$1 = ((cljs.core.seq_QMARK_.call(null,map__29637))?cljs.core.apply.call(null,cljs.core.hash_map,map__29637):map__29637);
-var end = cljs.core.get.call(null,map__29637__$1,new cljs.core.Keyword(null,"end","end",-268185958));
-var start = cljs.core.get.call(null,map__29637__$1,new cljs.core.Keyword(null,"start","start",-355208981));
-return cljs.core.take_while.call(null,((function (map__29637,map__29637__$1,end,start){
-return (function (p1__29634_SHARP_){
-return cljs.core.not.call(null,cljs_time.core.after_QMARK_.call(null,p1__29634_SHARP_,end));
-});})(map__29637,map__29637__$1,end,start))
-,cljs.core.map.call(null,((function (map__29637,map__29637__$1,end,start){
-return (function (p1__29633_SHARP_){
-return cljs_time.core.plus.call(null,start,cljs_time.core.months.call(null,(p1__29633_SHARP_ + (1))));
-});})(map__29637,map__29637__$1,end,start))
+cljs_time.core.month_range = (function cljs_time$core$month_range(p__29642){
+var map__29644 = p__29642;
+var map__29644__$1 = ((cljs.core.seq_QMARK_.call(null,map__29644))?cljs.core.apply.call(null,cljs.core.hash_map,map__29644):map__29644);
+var end = cljs.core.get.call(null,map__29644__$1,new cljs.core.Keyword(null,"end","end",-268185958));
+var start = cljs.core.get.call(null,map__29644__$1,new cljs.core.Keyword(null,"start","start",-355208981));
+return cljs.core.take_while.call(null,((function (map__29644,map__29644__$1,end,start){
+return (function (p1__29641_SHARP_){
+return cljs.core.not.call(null,cljs_time.core.after_QMARK_.call(null,p1__29641_SHARP_,end));
+});})(map__29644,map__29644__$1,end,start))
+,cljs.core.map.call(null,((function (map__29644,map__29644__$1,end,start){
+return (function (p1__29640_SHARP_){
+return cljs_time.core.plus.call(null,start,cljs_time.core.months.call(null,(p1__29640_SHARP_ + (1))));
+});})(map__29644,map__29644__$1,end,start))
 ,cljs.core.range.call(null)));
 });
 cljs_time.core.total_days_in_whole_months = (function cljs_time$core$total_days_in_whole_months(interval){
-return cljs.core.map.call(null,(function (p1__29638_SHARP_){
-return p1__29638_SHARP_.getNumberOfDaysInMonth();
+return cljs.core.map.call(null,(function (p1__29645_SHARP_){
+return p1__29645_SHARP_.getNumberOfDaysInMonth();
 }),cljs_time.core.month_range.call(null,interval));
 });
 /**
@@ -2301,22 +2301,22 @@ return p1__29638_SHARP_.getNumberOfDaysInMonth();
  * 
  * And, 28th Dec 2012 midnight to 28th Feb 2013 midnight returns 2 months.
  */
-cljs_time.core.in_months_ = (function cljs_time$core$in_months_(p__29639){
-var map__29641 = p__29639;
-var map__29641__$1 = ((cljs.core.seq_QMARK_.call(null,map__29641))?cljs.core.apply.call(null,cljs.core.hash_map,map__29641):map__29641);
-var interval = map__29641__$1;
-var end = cljs.core.get.call(null,map__29641__$1,new cljs.core.Keyword(null,"end","end",-268185958));
-var start = cljs.core.get.call(null,map__29641__$1,new cljs.core.Keyword(null,"start","start",-355208981));
+cljs_time.core.in_months_ = (function cljs_time$core$in_months_(p__29646){
+var map__29648 = p__29646;
+var map__29648__$1 = ((cljs.core.seq_QMARK_.call(null,map__29648))?cljs.core.apply.call(null,cljs.core.hash_map,map__29648):map__29648);
+var interval = map__29648__$1;
+var end = cljs.core.get.call(null,map__29648__$1,new cljs.core.Keyword(null,"end","end",-268185958));
+var start = cljs.core.get.call(null,map__29648__$1,new cljs.core.Keyword(null,"start","start",-355208981));
 return cljs.core.count.call(null,cljs_time.core.total_days_in_whole_months.call(null,interval));
 });
 /**
  * Returns the number of standard years in the given Interval.
  */
-cljs_time.core.in_years_ = (function cljs_time$core$in_years_(p__29642){
-var map__29644 = p__29642;
-var map__29644__$1 = ((cljs.core.seq_QMARK_.call(null,map__29644))?cljs.core.apply.call(null,cljs.core.hash_map,map__29644):map__29644);
-var end = cljs.core.get.call(null,map__29644__$1,new cljs.core.Keyword(null,"end","end",-268185958));
-var start = cljs.core.get.call(null,map__29644__$1,new cljs.core.Keyword(null,"start","start",-355208981));
+cljs_time.core.in_years_ = (function cljs_time$core$in_years_(p__29649){
+var map__29651 = p__29649;
+var map__29651__$1 = ((cljs.core.seq_QMARK_.call(null,map__29651))?cljs.core.apply.call(null,cljs.core.hash_map,map__29651):map__29651);
+var end = cljs.core.get.call(null,map__29651__$1,new cljs.core.Keyword(null,"end","end",-268185958));
+var start = cljs.core.get.call(null,map__29651__$1,new cljs.core.Keyword(null,"start","start",-355208981));
 var sm = cljs_time.core.month.call(null,start);
 var sd = cljs_time.core.day.call(null,start);
 var em = cljs_time.core.month.call(null,end);
@@ -2348,15 +2348,15 @@ throw cljs.core.ex_info.call(null,cljs_time.internal.core.format.call(null,"%s c
 });
 cljs_time.core.Interval.prototype.cljs_time$core$InTimeUnitProtocol$ = true;
 
-cljs_time.core.Interval.prototype.cljs_time$core$InTimeUnitProtocol$in_millis$arity$1 = (function (p__29645){
-var map__29646 = p__29645;
-var map__29646__$1 = ((cljs.core.seq_QMARK_.call(null,map__29646))?cljs.core.apply.call(null,cljs.core.hash_map,map__29646):map__29646);
-var end = cljs.core.get.call(null,map__29646__$1,new cljs.core.Keyword(null,"end","end",-268185958));
-var start = cljs.core.get.call(null,map__29646__$1,new cljs.core.Keyword(null,"start","start",-355208981));
-var map__29647 = this;
-var map__29647__$1 = ((cljs.core.seq_QMARK_.call(null,map__29647))?cljs.core.apply.call(null,cljs.core.hash_map,map__29647):map__29647);
-var end__$1 = cljs.core.get.call(null,map__29647__$1,new cljs.core.Keyword(null,"end","end",-268185958));
-var start__$1 = cljs.core.get.call(null,map__29647__$1,new cljs.core.Keyword(null,"start","start",-355208981));
+cljs_time.core.Interval.prototype.cljs_time$core$InTimeUnitProtocol$in_millis$arity$1 = (function (p__29652){
+var map__29653 = p__29652;
+var map__29653__$1 = ((cljs.core.seq_QMARK_.call(null,map__29653))?cljs.core.apply.call(null,cljs.core.hash_map,map__29653):map__29653);
+var end = cljs.core.get.call(null,map__29653__$1,new cljs.core.Keyword(null,"end","end",-268185958));
+var start = cljs.core.get.call(null,map__29653__$1,new cljs.core.Keyword(null,"start","start",-355208981));
+var map__29654 = this;
+var map__29654__$1 = ((cljs.core.seq_QMARK_.call(null,map__29654))?cljs.core.apply.call(null,cljs.core.hash_map,map__29654):map__29654);
+var end__$1 = cljs.core.get.call(null,map__29654__$1,new cljs.core.Keyword(null,"end","end",-268185958));
+var start__$1 = cljs.core.get.call(null,map__29654__$1,new cljs.core.Keyword(null,"start","start",-355208981));
 return (end__$1.getTime() - start__$1.getTime());
 });
 
@@ -2397,27 +2397,27 @@ return cljs_time.core.in_years_.call(null,this$__$1);
 
 cljs_time.core.Period.prototype.cljs_time$core$InTimeUnitProtocol$ = true;
 
-cljs_time.core.Period.prototype.cljs_time$core$InTimeUnitProtocol$in_millis$arity$1 = (function (p__29648){
-var map__29649 = p__29648;
-var map__29649__$1 = ((cljs.core.seq_QMARK_.call(null,map__29649))?cljs.core.apply.call(null,cljs.core.hash_map,map__29649):map__29649);
-var years = cljs.core.get.call(null,map__29649__$1,new cljs.core.Keyword(null,"years","years",-1298579689));
-var months = cljs.core.get.call(null,map__29649__$1,new cljs.core.Keyword(null,"months","months",-45571637));
-var weeks = cljs.core.get.call(null,map__29649__$1,new cljs.core.Keyword(null,"weeks","weeks",1844596125));
-var days = cljs.core.get.call(null,map__29649__$1,new cljs.core.Keyword(null,"days","days",-1394072564));
-var hours = cljs.core.get.call(null,map__29649__$1,new cljs.core.Keyword(null,"hours","hours",58380855));
-var minutes = cljs.core.get.call(null,map__29649__$1,new cljs.core.Keyword(null,"minutes","minutes",1319166394));
-var seconds = cljs.core.get.call(null,map__29649__$1,new cljs.core.Keyword(null,"seconds","seconds",-445266194));
-var millis = cljs.core.get.call(null,map__29649__$1,new cljs.core.Keyword(null,"millis","millis",-1338288387));
-var map__29650 = this;
-var map__29650__$1 = ((cljs.core.seq_QMARK_.call(null,map__29650))?cljs.core.apply.call(null,cljs.core.hash_map,map__29650):map__29650);
-var years__$1 = cljs.core.get.call(null,map__29650__$1,new cljs.core.Keyword(null,"years","years",-1298579689));
-var months__$1 = cljs.core.get.call(null,map__29650__$1,new cljs.core.Keyword(null,"months","months",-45571637));
-var weeks__$1 = cljs.core.get.call(null,map__29650__$1,new cljs.core.Keyword(null,"weeks","weeks",1844596125));
-var days__$1 = cljs.core.get.call(null,map__29650__$1,new cljs.core.Keyword(null,"days","days",-1394072564));
-var hours__$1 = cljs.core.get.call(null,map__29650__$1,new cljs.core.Keyword(null,"hours","hours",58380855));
-var minutes__$1 = cljs.core.get.call(null,map__29650__$1,new cljs.core.Keyword(null,"minutes","minutes",1319166394));
-var seconds__$1 = cljs.core.get.call(null,map__29650__$1,new cljs.core.Keyword(null,"seconds","seconds",-445266194));
-var millis__$1 = cljs.core.get.call(null,map__29650__$1,new cljs.core.Keyword(null,"millis","millis",-1338288387));
+cljs_time.core.Period.prototype.cljs_time$core$InTimeUnitProtocol$in_millis$arity$1 = (function (p__29655){
+var map__29656 = p__29655;
+var map__29656__$1 = ((cljs.core.seq_QMARK_.call(null,map__29656))?cljs.core.apply.call(null,cljs.core.hash_map,map__29656):map__29656);
+var years = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"years","years",-1298579689));
+var months = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"months","months",-45571637));
+var weeks = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"weeks","weeks",1844596125));
+var days = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"days","days",-1394072564));
+var hours = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"hours","hours",58380855));
+var minutes = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"minutes","minutes",1319166394));
+var seconds = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"seconds","seconds",-445266194));
+var millis = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"millis","millis",-1338288387));
+var map__29657 = this;
+var map__29657__$1 = ((cljs.core.seq_QMARK_.call(null,map__29657))?cljs.core.apply.call(null,cljs.core.hash_map,map__29657):map__29657);
+var years__$1 = cljs.core.get.call(null,map__29657__$1,new cljs.core.Keyword(null,"years","years",-1298579689));
+var months__$1 = cljs.core.get.call(null,map__29657__$1,new cljs.core.Keyword(null,"months","months",-45571637));
+var weeks__$1 = cljs.core.get.call(null,map__29657__$1,new cljs.core.Keyword(null,"weeks","weeks",1844596125));
+var days__$1 = cljs.core.get.call(null,map__29657__$1,new cljs.core.Keyword(null,"days","days",-1394072564));
+var hours__$1 = cljs.core.get.call(null,map__29657__$1,new cljs.core.Keyword(null,"hours","hours",58380855));
+var minutes__$1 = cljs.core.get.call(null,map__29657__$1,new cljs.core.Keyword(null,"minutes","minutes",1319166394));
+var seconds__$1 = cljs.core.get.call(null,map__29657__$1,new cljs.core.Keyword(null,"seconds","seconds",-445266194));
+var millis__$1 = cljs.core.get.call(null,map__29657__$1,new cljs.core.Keyword(null,"millis","millis",-1338288387));
 if(cljs.core.truth_(months__$1)){
 return cljs_time.core.conversion_error.call(null,new cljs.core.Keyword(null,"months","months",-45571637),new cljs.core.Keyword(null,"millis","millis",-1338288387));
 } else {
@@ -2455,27 +2455,27 @@ var this$__$1 = this;
 return ((cljs_time.core.in_days.call(null,this$__$1) / (7)) | (0));
 });
 
-cljs_time.core.Period.prototype.cljs_time$core$InTimeUnitProtocol$in_months$arity$1 = (function (p__29651){
-var map__29652 = p__29651;
-var map__29652__$1 = ((cljs.core.seq_QMARK_.call(null,map__29652))?cljs.core.apply.call(null,cljs.core.hash_map,map__29652):map__29652);
-var years = cljs.core.get.call(null,map__29652__$1,new cljs.core.Keyword(null,"years","years",-1298579689));
-var months = cljs.core.get.call(null,map__29652__$1,new cljs.core.Keyword(null,"months","months",-45571637));
-var weeks = cljs.core.get.call(null,map__29652__$1,new cljs.core.Keyword(null,"weeks","weeks",1844596125));
-var days = cljs.core.get.call(null,map__29652__$1,new cljs.core.Keyword(null,"days","days",-1394072564));
-var hours = cljs.core.get.call(null,map__29652__$1,new cljs.core.Keyword(null,"hours","hours",58380855));
-var minutes = cljs.core.get.call(null,map__29652__$1,new cljs.core.Keyword(null,"minutes","minutes",1319166394));
-var seconds = cljs.core.get.call(null,map__29652__$1,new cljs.core.Keyword(null,"seconds","seconds",-445266194));
-var millis = cljs.core.get.call(null,map__29652__$1,new cljs.core.Keyword(null,"millis","millis",-1338288387));
-var map__29653 = this;
-var map__29653__$1 = ((cljs.core.seq_QMARK_.call(null,map__29653))?cljs.core.apply.call(null,cljs.core.hash_map,map__29653):map__29653);
-var years__$1 = cljs.core.get.call(null,map__29653__$1,new cljs.core.Keyword(null,"years","years",-1298579689));
-var months__$1 = cljs.core.get.call(null,map__29653__$1,new cljs.core.Keyword(null,"months","months",-45571637));
-var weeks__$1 = cljs.core.get.call(null,map__29653__$1,new cljs.core.Keyword(null,"weeks","weeks",1844596125));
-var days__$1 = cljs.core.get.call(null,map__29653__$1,new cljs.core.Keyword(null,"days","days",-1394072564));
-var hours__$1 = cljs.core.get.call(null,map__29653__$1,new cljs.core.Keyword(null,"hours","hours",58380855));
-var minutes__$1 = cljs.core.get.call(null,map__29653__$1,new cljs.core.Keyword(null,"minutes","minutes",1319166394));
-var seconds__$1 = cljs.core.get.call(null,map__29653__$1,new cljs.core.Keyword(null,"seconds","seconds",-445266194));
-var millis__$1 = cljs.core.get.call(null,map__29653__$1,new cljs.core.Keyword(null,"millis","millis",-1338288387));
+cljs_time.core.Period.prototype.cljs_time$core$InTimeUnitProtocol$in_months$arity$1 = (function (p__29658){
+var map__29659 = p__29658;
+var map__29659__$1 = ((cljs.core.seq_QMARK_.call(null,map__29659))?cljs.core.apply.call(null,cljs.core.hash_map,map__29659):map__29659);
+var years = cljs.core.get.call(null,map__29659__$1,new cljs.core.Keyword(null,"years","years",-1298579689));
+var months = cljs.core.get.call(null,map__29659__$1,new cljs.core.Keyword(null,"months","months",-45571637));
+var weeks = cljs.core.get.call(null,map__29659__$1,new cljs.core.Keyword(null,"weeks","weeks",1844596125));
+var days = cljs.core.get.call(null,map__29659__$1,new cljs.core.Keyword(null,"days","days",-1394072564));
+var hours = cljs.core.get.call(null,map__29659__$1,new cljs.core.Keyword(null,"hours","hours",58380855));
+var minutes = cljs.core.get.call(null,map__29659__$1,new cljs.core.Keyword(null,"minutes","minutes",1319166394));
+var seconds = cljs.core.get.call(null,map__29659__$1,new cljs.core.Keyword(null,"seconds","seconds",-445266194));
+var millis = cljs.core.get.call(null,map__29659__$1,new cljs.core.Keyword(null,"millis","millis",-1338288387));
+var map__29660 = this;
+var map__29660__$1 = ((cljs.core.seq_QMARK_.call(null,map__29660))?cljs.core.apply.call(null,cljs.core.hash_map,map__29660):map__29660);
+var years__$1 = cljs.core.get.call(null,map__29660__$1,new cljs.core.Keyword(null,"years","years",-1298579689));
+var months__$1 = cljs.core.get.call(null,map__29660__$1,new cljs.core.Keyword(null,"months","months",-45571637));
+var weeks__$1 = cljs.core.get.call(null,map__29660__$1,new cljs.core.Keyword(null,"weeks","weeks",1844596125));
+var days__$1 = cljs.core.get.call(null,map__29660__$1,new cljs.core.Keyword(null,"days","days",-1394072564));
+var hours__$1 = cljs.core.get.call(null,map__29660__$1,new cljs.core.Keyword(null,"hours","hours",58380855));
+var minutes__$1 = cljs.core.get.call(null,map__29660__$1,new cljs.core.Keyword(null,"minutes","minutes",1319166394));
+var seconds__$1 = cljs.core.get.call(null,map__29660__$1,new cljs.core.Keyword(null,"seconds","seconds",-445266194));
+var millis__$1 = cljs.core.get.call(null,map__29660__$1,new cljs.core.Keyword(null,"millis","millis",-1338288387));
 if(cljs.core.truth_(millis__$1)){
 return cljs_time.core.conversion_error.call(null,new cljs.core.Keyword(null,"millis","millis",-1338288387),new cljs.core.Keyword(null,"months","months",-45571637));
 } else {
@@ -2517,27 +2517,27 @@ return null;
 }
 });
 
-cljs_time.core.Period.prototype.cljs_time$core$InTimeUnitProtocol$in_years$arity$1 = (function (p__29654){
-var map__29655 = p__29654;
-var map__29655__$1 = ((cljs.core.seq_QMARK_.call(null,map__29655))?cljs.core.apply.call(null,cljs.core.hash_map,map__29655):map__29655);
-var years = cljs.core.get.call(null,map__29655__$1,new cljs.core.Keyword(null,"years","years",-1298579689));
-var months = cljs.core.get.call(null,map__29655__$1,new cljs.core.Keyword(null,"months","months",-45571637));
-var weeks = cljs.core.get.call(null,map__29655__$1,new cljs.core.Keyword(null,"weeks","weeks",1844596125));
-var days = cljs.core.get.call(null,map__29655__$1,new cljs.core.Keyword(null,"days","days",-1394072564));
-var hours = cljs.core.get.call(null,map__29655__$1,new cljs.core.Keyword(null,"hours","hours",58380855));
-var minutes = cljs.core.get.call(null,map__29655__$1,new cljs.core.Keyword(null,"minutes","minutes",1319166394));
-var seconds = cljs.core.get.call(null,map__29655__$1,new cljs.core.Keyword(null,"seconds","seconds",-445266194));
-var millis = cljs.core.get.call(null,map__29655__$1,new cljs.core.Keyword(null,"millis","millis",-1338288387));
-var map__29656 = this;
-var map__29656__$1 = ((cljs.core.seq_QMARK_.call(null,map__29656))?cljs.core.apply.call(null,cljs.core.hash_map,map__29656):map__29656);
-var years__$1 = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"years","years",-1298579689));
-var months__$1 = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"months","months",-45571637));
-var weeks__$1 = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"weeks","weeks",1844596125));
-var days__$1 = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"days","days",-1394072564));
-var hours__$1 = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"hours","hours",58380855));
-var minutes__$1 = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"minutes","minutes",1319166394));
-var seconds__$1 = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"seconds","seconds",-445266194));
-var millis__$1 = cljs.core.get.call(null,map__29656__$1,new cljs.core.Keyword(null,"millis","millis",-1338288387));
+cljs_time.core.Period.prototype.cljs_time$core$InTimeUnitProtocol$in_years$arity$1 = (function (p__29661){
+var map__29662 = p__29661;
+var map__29662__$1 = ((cljs.core.seq_QMARK_.call(null,map__29662))?cljs.core.apply.call(null,cljs.core.hash_map,map__29662):map__29662);
+var years = cljs.core.get.call(null,map__29662__$1,new cljs.core.Keyword(null,"years","years",-1298579689));
+var months = cljs.core.get.call(null,map__29662__$1,new cljs.core.Keyword(null,"months","months",-45571637));
+var weeks = cljs.core.get.call(null,map__29662__$1,new cljs.core.Keyword(null,"weeks","weeks",1844596125));
+var days = cljs.core.get.call(null,map__29662__$1,new cljs.core.Keyword(null,"days","days",-1394072564));
+var hours = cljs.core.get.call(null,map__29662__$1,new cljs.core.Keyword(null,"hours","hours",58380855));
+var minutes = cljs.core.get.call(null,map__29662__$1,new cljs.core.Keyword(null,"minutes","minutes",1319166394));
+var seconds = cljs.core.get.call(null,map__29662__$1,new cljs.core.Keyword(null,"seconds","seconds",-445266194));
+var millis = cljs.core.get.call(null,map__29662__$1,new cljs.core.Keyword(null,"millis","millis",-1338288387));
+var map__29663 = this;
+var map__29663__$1 = ((cljs.core.seq_QMARK_.call(null,map__29663))?cljs.core.apply.call(null,cljs.core.hash_map,map__29663):map__29663);
+var years__$1 = cljs.core.get.call(null,map__29663__$1,new cljs.core.Keyword(null,"years","years",-1298579689));
+var months__$1 = cljs.core.get.call(null,map__29663__$1,new cljs.core.Keyword(null,"months","months",-45571637));
+var weeks__$1 = cljs.core.get.call(null,map__29663__$1,new cljs.core.Keyword(null,"weeks","weeks",1844596125));
+var days__$1 = cljs.core.get.call(null,map__29663__$1,new cljs.core.Keyword(null,"days","days",-1394072564));
+var hours__$1 = cljs.core.get.call(null,map__29663__$1,new cljs.core.Keyword(null,"hours","hours",58380855));
+var minutes__$1 = cljs.core.get.call(null,map__29663__$1,new cljs.core.Keyword(null,"minutes","minutes",1319166394));
+var seconds__$1 = cljs.core.get.call(null,map__29663__$1,new cljs.core.Keyword(null,"seconds","seconds",-445266194));
+var millis__$1 = cljs.core.get.call(null,map__29663__$1,new cljs.core.Keyword(null,"millis","millis",-1338288387));
 if(cljs.core.truth_(millis__$1)){
 return cljs_time.core.conversion_error.call(null,new cljs.core.Keyword(null,"millis","millis",-1338288387),new cljs.core.Keyword(null,"years","years",-1298579689));
 } else {
@@ -2582,8 +2582,8 @@ return null;
  * DateTime.
  */
 cljs_time.core.within_QMARK_ = (function cljs_time$core$within_QMARK_(){
-var G__29658 = arguments.length;
-switch (G__29658) {
+var G__29665 = arguments.length;
+switch (G__29665) {
 case 2:
 return cljs_time.core.within_QMARK_.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -2598,11 +2598,11 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.lengt
 }
 });
 
-cljs_time.core.within_QMARK_.cljs$core$IFn$_invoke$arity$2 = (function (p__29659,date){
-var map__29660 = p__29659;
-var map__29660__$1 = ((cljs.core.seq_QMARK_.call(null,map__29660))?cljs.core.apply.call(null,cljs.core.hash_map,map__29660):map__29660);
-var end = cljs.core.get.call(null,map__29660__$1,new cljs.core.Keyword(null,"end","end",-268185958));
-var start = cljs.core.get.call(null,map__29660__$1,new cljs.core.Keyword(null,"start","start",-355208981));
+cljs_time.core.within_QMARK_.cljs$core$IFn$_invoke$arity$2 = (function (p__29666,date){
+var map__29667 = p__29666;
+var map__29667__$1 = ((cljs.core.seq_QMARK_.call(null,map__29667))?cljs.core.apply.call(null,cljs.core.hash_map,map__29667):map__29667);
+var end = cljs.core.get.call(null,map__29667__$1,new cljs.core.Keyword(null,"end","end",-268185958));
+var start = cljs.core.get.call(null,map__29667__$1,new cljs.core.Keyword(null,"start","start",-355208981));
 return cljs_time.core.within_QMARK_.call(null,start,end,date);
 });
 
@@ -2629,8 +2629,8 @@ cljs_time.core.within_QMARK_.cljs$lang$maxFixedArity = 3;
  * overlaps with the range specified by start-b and end-b.
  */
 cljs_time.core.overlaps_QMARK_ = (function cljs_time$core$overlaps_QMARK_(){
-var G__29663 = arguments.length;
-switch (G__29663) {
+var G__29670 = arguments.length;
+switch (G__29670) {
 case 2:
 return cljs_time.core.overlaps_QMARK_.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -2645,15 +2645,15 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.lengt
 }
 });
 
-cljs_time.core.overlaps_QMARK_.cljs$core$IFn$_invoke$arity$2 = (function (p__29664,p__29665){
-var map__29666 = p__29664;
-var map__29666__$1 = ((cljs.core.seq_QMARK_.call(null,map__29666))?cljs.core.apply.call(null,cljs.core.hash_map,map__29666):map__29666);
-var start_a = cljs.core.get.call(null,map__29666__$1,new cljs.core.Keyword(null,"start","start",-355208981));
-var end_a = cljs.core.get.call(null,map__29666__$1,new cljs.core.Keyword(null,"end","end",-268185958));
-var map__29667 = p__29665;
-var map__29667__$1 = ((cljs.core.seq_QMARK_.call(null,map__29667))?cljs.core.apply.call(null,cljs.core.hash_map,map__29667):map__29667);
-var start_b = cljs.core.get.call(null,map__29667__$1,new cljs.core.Keyword(null,"start","start",-355208981));
-var end_b = cljs.core.get.call(null,map__29667__$1,new cljs.core.Keyword(null,"end","end",-268185958));
+cljs_time.core.overlaps_QMARK_.cljs$core$IFn$_invoke$arity$2 = (function (p__29671,p__29672){
+var map__29673 = p__29671;
+var map__29673__$1 = ((cljs.core.seq_QMARK_.call(null,map__29673))?cljs.core.apply.call(null,cljs.core.hash_map,map__29673):map__29673);
+var start_a = cljs.core.get.call(null,map__29673__$1,new cljs.core.Keyword(null,"start","start",-355208981));
+var end_a = cljs.core.get.call(null,map__29673__$1,new cljs.core.Keyword(null,"end","end",-268185958));
+var map__29674 = p__29672;
+var map__29674__$1 = ((cljs.core.seq_QMARK_.call(null,map__29674))?cljs.core.apply.call(null,cljs.core.hash_map,map__29674):map__29674);
+var start_b = cljs.core.get.call(null,map__29674__$1,new cljs.core.Keyword(null,"start","start",-355208981));
+var end_b = cljs.core.get.call(null,map__29674__$1,new cljs.core.Keyword(null,"end","end",-268185958));
 var and__18148__auto__ = cljs.core.not.call(null,(function (){var or__18160__auto__ = cljs_time.core._EQ_.call(null,start_a,end_b);
 if(cljs.core.truth_(or__18160__auto__)){
 return or__18160__auto__;
@@ -2704,15 +2704,15 @@ cljs_time.core.overlaps_QMARK_.cljs$lang$maxFixedArity = 4;
  * Returns true if Interval a abuts b, i.e. then end of a is exactly the
  * beginning of b.
  */
-cljs_time.core.abuts_QMARK_ = (function cljs_time$core$abuts_QMARK_(p__29669,p__29670){
-var map__29673 = p__29669;
-var map__29673__$1 = ((cljs.core.seq_QMARK_.call(null,map__29673))?cljs.core.apply.call(null,cljs.core.hash_map,map__29673):map__29673);
-var start_a = cljs.core.get.call(null,map__29673__$1,new cljs.core.Keyword(null,"start","start",-355208981));
-var end_a = cljs.core.get.call(null,map__29673__$1,new cljs.core.Keyword(null,"end","end",-268185958));
-var map__29674 = p__29670;
-var map__29674__$1 = ((cljs.core.seq_QMARK_.call(null,map__29674))?cljs.core.apply.call(null,cljs.core.hash_map,map__29674):map__29674);
-var start_b = cljs.core.get.call(null,map__29674__$1,new cljs.core.Keyword(null,"start","start",-355208981));
-var end_b = cljs.core.get.call(null,map__29674__$1,new cljs.core.Keyword(null,"end","end",-268185958));
+cljs_time.core.abuts_QMARK_ = (function cljs_time$core$abuts_QMARK_(p__29676,p__29677){
+var map__29680 = p__29676;
+var map__29680__$1 = ((cljs.core.seq_QMARK_.call(null,map__29680))?cljs.core.apply.call(null,cljs.core.hash_map,map__29680):map__29680);
+var start_a = cljs.core.get.call(null,map__29680__$1,new cljs.core.Keyword(null,"start","start",-355208981));
+var end_a = cljs.core.get.call(null,map__29680__$1,new cljs.core.Keyword(null,"end","end",-268185958));
+var map__29681 = p__29677;
+var map__29681__$1 = ((cljs.core.seq_QMARK_.call(null,map__29681))?cljs.core.apply.call(null,cljs.core.hash_map,map__29681):map__29681);
+var start_b = cljs.core.get.call(null,map__29681__$1,new cljs.core.Keyword(null,"start","start",-355208981));
+var end_b = cljs.core.get.call(null,map__29681__$1,new cljs.core.Keyword(null,"end","end",-268185958));
 var or__18160__auto__ = cljs_time.core._EQ_.call(null,start_a,end_b);
 if(cljs.core.truth_(or__18160__auto__)){
 return or__18160__auto__;
@@ -2721,26 +2721,26 @@ return cljs_time.core._EQ_.call(null,end_a,start_b);
 }
 });
 cljs_time.core.date_QMARK_ = (function cljs_time$core$date_QMARK_(x){
-var G__29676 = x;
-if(G__29676){
+var G__29683 = x;
+if(G__29683){
 var bit__18834__auto__ = null;
 if(cljs.core.truth_((function (){var or__18160__auto__ = bit__18834__auto__;
 if(cljs.core.truth_(or__18160__auto__)){
 return or__18160__auto__;
 } else {
-return G__29676.cljs_time$core$DateTimeProtocol$;
+return G__29683.cljs_time$core$DateTimeProtocol$;
 }
 })())){
 return true;
 } else {
-if((!G__29676.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,cljs_time.core.DateTimeProtocol,G__29676);
+if((!G__29683.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,cljs_time.core.DateTimeProtocol,G__29683);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,cljs_time.core.DateTimeProtocol,G__29676);
+return cljs.core.native_satisfies_QMARK_.call(null,cljs_time.core.DateTimeProtocol,G__29683);
 }
 });
 cljs_time.core.interval_QMARK_ = (function cljs_time$core$interval_QMARK_(x){
@@ -2803,8 +2803,8 @@ cljs_time.core.mins_ago = (function cljs_time$core$mins_ago(d){
 return cljs_time.core.in_minutes.call(null,cljs_time.core.interval.call(null,d,cljs_time.core.now.call(null)));
 });
 cljs_time.core.last_day_of_the_month = (function cljs_time$core$last_day_of_the_month(){
-var G__29678 = arguments.length;
-switch (G__29678) {
+var G__29685 = arguments.length;
+switch (G__29685) {
 case 1:
 return cljs_time.core.last_day_of_the_month.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -2829,8 +2829,8 @@ return cljs_time.core.last_day_of_the_month_.call(null,cljs_time.core.date_time.
 
 cljs_time.core.last_day_of_the_month.cljs$lang$maxFixedArity = 2;
 cljs_time.core.number_of_days_in_the_month = (function cljs_time$core$number_of_days_in_the_month(){
-var G__29681 = arguments.length;
-switch (G__29681) {
+var G__29688 = arguments.length;
+switch (G__29688) {
 case 1:
 return cljs_time.core.number_of_days_in_the_month.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -2855,8 +2855,8 @@ return cljs_time.core.last_day_of_the_month.call(null,year,month).getDate();
 
 cljs_time.core.number_of_days_in_the_month.cljs$lang$maxFixedArity = 2;
 cljs_time.core.first_day_of_the_month = (function cljs_time$core$first_day_of_the_month(){
-var G__29684 = arguments.length;
-switch (G__29684) {
+var G__29691 = arguments.length;
+switch (G__29691) {
 case 1:
 return cljs_time.core.first_day_of_the_month.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -2890,12 +2890,12 @@ var hierarchy__19059__auto__ = cljs.core.get.call(null,cljs.core.PersistentArray
 return (new cljs.core.MultiFn(cljs.core.symbol.call(null,"cljs-time.core","->period"),cljs.core.type,new cljs.core.Keyword(null,"default","default",-1987822328),hierarchy__19059__auto__,method_table__19055__auto__,prefer_table__19056__auto__,method_cache__19057__auto__,cached_hierarchy__19058__auto__));
 })();
 }
-cljs.core._add_method.call(null,cljs_time.core.__GT_period,cljs_time.core.Interval,(function (p__29686){
-var map__29687 = p__29686;
-var map__29687__$1 = ((cljs.core.seq_QMARK_.call(null,map__29687))?cljs.core.apply.call(null,cljs.core.hash_map,map__29687):map__29687);
-var interval = map__29687__$1;
-var end = cljs.core.get.call(null,map__29687__$1,new cljs.core.Keyword(null,"end","end",-268185958));
-var start = cljs.core.get.call(null,map__29687__$1,new cljs.core.Keyword(null,"start","start",-355208981));
+cljs.core._add_method.call(null,cljs_time.core.__GT_period,cljs_time.core.Interval,(function (p__29693){
+var map__29694 = p__29693;
+var map__29694__$1 = ((cljs.core.seq_QMARK_.call(null,map__29694))?cljs.core.apply.call(null,cljs.core.hash_map,map__29694):map__29694);
+var interval = map__29694__$1;
+var end = cljs.core.get.call(null,map__29694__$1,new cljs.core.Keyword(null,"end","end",-268185958));
+var start = cljs.core.get.call(null,map__29694__$1,new cljs.core.Keyword(null,"start","start",-355208981));
 var years = cljs_time.core.in_years.call(null,interval);
 var start_year = cljs_time.core.year.call(null,start);
 var leap_years = cljs.core.count.call(null,cljs.core.remove.call(null,cljs.core.false_QMARK_,cljs.core.map.call(null,cljs_time.internal.core.leap_year_QMARK_,cljs.core.range.call(null,start_year,(start_year + years)))));
@@ -2916,8 +2916,8 @@ cljs.core._add_method.call(null,cljs_time.core.__GT_period,cljs_time.core.Period
 return period;
 }));
 cljs_time.core.today_at = (function cljs_time$core$today_at(){
-var G__29689 = arguments.length;
-switch (G__29689) {
+var G__29696 = arguments.length;
+switch (G__29696) {
 case 4:
 return cljs_time.core.today_at.cljs$core$IFn$_invoke$arity$4((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]));
 
@@ -2937,27 +2937,27 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.lengt
 });
 
 cljs_time.core.today_at.cljs$core$IFn$_invoke$arity$4 = (function (hours,minutes,seconds,millis){
-var midnight = (function (){var G__29690 = (new goog.date.Date());
-G__29690.setTime(cljs_time.core._STAR_ms_fn_STAR_.call(null));
+var midnight = (function (){var G__29697 = (new goog.date.Date());
+G__29697.setTime(cljs_time.core._STAR_ms_fn_STAR_.call(null));
 
-return G__29690;
+return G__29697;
 })();
-var G__29691 = (new goog.date.UtcDateTime((0)));
-G__29691.setYear(midnight.getYear());
+var G__29698 = (new goog.date.UtcDateTime((0)));
+G__29698.setYear(midnight.getYear());
 
-G__29691.setMonth(midnight.getMonth());
+G__29698.setMonth(midnight.getMonth());
 
-G__29691.setDate(midnight.getDate());
+G__29698.setDate(midnight.getDate());
 
-G__29691.setHours(hours);
+G__29698.setHours(hours);
 
-G__29691.setMinutes(minutes);
+G__29698.setMinutes(minutes);
 
-G__29691.setSeconds(seconds);
+G__29698.setSeconds(seconds);
 
-G__29691.setMilliseconds(millis);
+G__29698.setMilliseconds(millis);
 
-return G__29691;
+return G__29698;
 });
 
 cljs_time.core.today_at.cljs$core$IFn$_invoke$arity$3 = (function (hours,minutes,seconds){
@@ -2970,11 +2970,11 @@ return cljs_time.core.today_at.call(null,hours,minutes,(0));
 
 cljs_time.core.today_at.cljs$lang$maxFixedArity = 4;
 cljs_time.core.do_at_STAR_ = (function cljs_time$core$do_at_STAR_(base_date_time,body_fn){
-var _STAR_ms_fn_STAR_29694 = cljs_time.core._STAR_ms_fn_STAR_;
+var _STAR_ms_fn_STAR_29701 = cljs_time.core._STAR_ms_fn_STAR_;
 cljs_time.core._STAR_ms_fn_STAR_ = cljs_time.core.static_ms_fn.call(null,base_date_time.getTime());
 
 try{return body_fn.call(null);
-}finally {cljs_time.core._STAR_ms_fn_STAR_ = _STAR_ms_fn_STAR_29694;
+}finally {cljs_time.core._STAR_ms_fn_STAR_ = _STAR_ms_fn_STAR_29701;
 }});
 
-//# sourceMappingURL=core.js.map?rel=1441122551118
+//# sourceMappingURL=core.js.map?rel=1441291724847

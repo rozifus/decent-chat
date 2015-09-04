@@ -5,4 +5,9 @@
 (re-frame/register-sub
  :messages
  (fn [db]
-   (reaction (:messages @db))))
+   (reaction (get-in @db [:data :messages]))))
+
+(re-frame/register-sub
+ :ui/latch
+ (fn [db]
+   (reaction (get-in @db [:ui :state :latch]))))
