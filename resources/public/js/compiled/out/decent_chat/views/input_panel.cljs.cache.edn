@@ -1,2 +1,0 @@
-;; Analyzed by ClojureScript 0.0-3211
-{:imports nil, :requires {rc re-com.core, re-com.core re-com.core, re-frame.core re-frame.core, reagent.core reagent.core, reagent reagent.core}, :uses {atom reagent.core, subscribe re-frame.core, dispatch re-frame.core}, :require-macros {rc re-com.core, re-com.core re-com.core, reagent.ratom reagent.ratom}, :use-macros {reaction reagent.ratom, handler-fn re-com.core}, :excludes #{}, :doc nil, :name decent-chat.views.input-panel}
