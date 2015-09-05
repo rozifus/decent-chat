@@ -41,12 +41,6 @@
                {:id id :content content :media media}))))
 
 (r/register-handler
- :ui/activate-latch
- (fn [state [_]]
-   (dispatch [:ui/scroll-to-bottom-if-latched])
-   (assoc-in state [:ui :state :latch] true)))
-
-(r/register-handler
  :ui/scroll-messages-to-bottom
  (fn [state [_]]
    (scroll-messages-to-bottom)
@@ -92,6 +86,12 @@
    (if active?
      (assoc-in app-state [:ui :state :latch] latch?)
      app-state)))
+
+(r/register-handler
+ :ui/activate-latch
+ (fn [state [_]]
+   (dispatch [:ui/scroll-to-bottom-if-latched])
+   (assoc-in state [:ui :state :latch] true)))
 
 )
 
