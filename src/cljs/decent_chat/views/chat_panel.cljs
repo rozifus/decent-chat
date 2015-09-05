@@ -6,20 +6,6 @@
     (:require-macros
       [reagent.ratom :refer [reaction]]))
 
-;;;;;;;;;;;;;;;;;;;;
-;; Event Handlers ;;
-;;;;;;;;;;;;;;;;;;;;
-
-(defn scroll-messages-to-bottom [detect-scroll?]
-  (let [elements (.getElementsByClassName js/document "message-scroller")
-        scroller (aget elements 0)]
-    (when-not (nil? detect-scroll?) (reset! detect-scroll? false))
-    (set! (.-scrollTop scroller) (.-scrollHeight scroller))))
-
-(defn handle-messages-scroll-event [detect-scroll?]
-  (dispatch [:ui/set-latch false @detect-scroll?])
-  (reset! detect-scroll? true))
-
 ;;;;;;;;;;;;;;;;;
 ;; Input Panel ;;
 ;;;;;;;;;;;;;;;;;

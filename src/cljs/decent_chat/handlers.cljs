@@ -5,20 +5,22 @@
 
 (enable-console-print!)
 
-(defn scroll-messages-to-bottom []
-  (let [elements (.getElementsByClassName js/document "message-scroller")
+(defn scroll-to-bottom [class-name]
+  (let [elements (.getElementsByClassName js/document class-name)
         scroller (aget elements 0)]
-    (set! (.-scrollTop scroller) (.-scrollHeight scroller))))
+    (when-not (nil? scroller)
+      (set! (.-scrollTop scroller) (.-scrollHeight scroller)))))
 
-(defn messages-scrolled-near-bottom? 
-  ([] (messages-scrolled-near-bottom? 0))
-  ([near] 
-   (let [elements (.getElementsByClassName js/document "message-scroller")
+(defn scrolled-to-bottom?
+  ([class-name] (scrolled-to-bottom? class-name 0))
+  ([class-name tolerance] 
+   (let [elements (.getElementsByClassName js/document class-name)
          scroller (aget elements 0)]
-     (if (>= (+ (.-scrollTop scroller) (.-clientHeight scroller))
-             (.-scrollHeight scroller))
-       true
-       false))))
+     (cond 
+       (nil? scroller) false 
+       (>= (+ (.-scrollTop scroller) (.-clientHeight scroller) tolerance) 
+           (.-scrollHeight scroller)) true
+       :else false))))
 
 (defn allocate-next-id
   "Returns the next daypart id.
@@ -43,7 +45,7 @@
 (r/register-handler
  :ui/scroll-messages-to-bottom
  (fn [state [_]]
-   (scroll-messages-to-bottom)
+   (scroll-to-bottom "message-scroller")
    state))
 
 (r/register-handler
@@ -56,7 +58,7 @@
 (r/register-handler
  :ui/message-scroll
  (fn [state [_]]
-   (if (messages-scrolled-near-bottom? 20)
+   (if (scrolled-to-bottom? "message-scroller" 20)
      (assoc-in state [:ui :state :latch] true)
      (assoc-in state [:ui :state :latch] false))))
 
