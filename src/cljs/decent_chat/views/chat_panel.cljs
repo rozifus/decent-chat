@@ -10,9 +10,11 @@
 ;; Event Handlers ;;
 ;;;;;;;;;;;;;;;;;;;;
 
-(defn scroll-messages-to-bottom [element detect-scroll?]
-  (reset! detect-scroll? false)
-  (set! (.-scrollTop element) (.-scrollHeight element)))
+(defn scroll-messages-to-bottom [detect-scroll?]
+  (let [elements (.getElementsByClassName js/document "message-scroller")
+        scroller (aget elements 0)]
+    (when-not (nil? detect-scroll?) (reset! detect-scroll? false))
+    (set! (.-scrollTop scroller) (.-scrollHeight scroller))))
 
 (defn handle-messages-scroll-event [detect-scroll?]
   (dispatch [:ui/set-latch false @detect-scroll?])
@@ -45,7 +47,7 @@
       [rc/border
        :border "1em solid white"
        :child [rc/button
-                :on-click #(do(dispatch [:ui/set-latch true true]))
+                :on-click #(do(dispatch [:ui/activate-latch]))
                 :disabled? (reaction @disabled?) 
                 :label "Latch"]])))
 
@@ -85,20 +87,21 @@
 
 (defn message-panel []
   (let [messages        (subscribe [:messages])
-        latch?          (subscribe [:ui/latch])
+        latch           (subscribe [:ui/latch])
         detect-scroll?  (reagent/atom true)]
     (reagent/create-class
       {:display-name "message-panel"
        :component-did-mount
-       #(when @latch? (scroll-messages-to-bottom (reagent/dom-node %) detect-scroll?))
+       #(dispatch [:ui/scroll-to-bottom-if-latched]) 
        :component-did-update
-       #(when @latch? (scroll-messages-to-bottom (reagent/dom-node %) detect-scroll?))
+       #(dispatch [:ui/scroll-to-bottom-if-latched])
        :reagent-render
        (fn [] 
          [rc/scroller 
           :v-scroll :auto 
           :size "auto" 
-          :attr { :on-scroll (handler-fn (handle-messages-scroll-event detect-scroll?))}
+          :class "message-scroller"
+          :attr { :on-scroll #(dispatch [:ui/message-scroll])}
           :child [rc/v-box 
                   :children (for [[id message] @messages]
                                  ^{:key id} [message-item message])]])})))
