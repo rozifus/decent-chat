@@ -47,7 +47,7 @@
       [rc/border
        :border "1em solid white"
        :child [rc/button
-                :on-click #(do(dispatch [:ui/activate-latch]))
+                :on-click #(do(dispatch [:ui/scroll-messages-to-bottom]))
                 :disabled? (reaction @disabled?) 
                 :label "Latch"]])))
 
@@ -92,9 +92,9 @@
     (reagent/create-class
       {:display-name "message-panel"
        :component-did-mount
-       #(dispatch [:ui/scroll-to-bottom-if-latched]) 
+       #(dispatch [:ui/scroll-messages-to-bottom-if-latched]) 
        :component-did-update
-       #(dispatch [:ui/scroll-to-bottom-if-latched])
+       #(dispatch [:ui/scroll-messages-to-bottom-if-latched])
        :reagent-render
        (fn [] 
          [rc/scroller 

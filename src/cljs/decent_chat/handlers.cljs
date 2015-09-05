@@ -41,23 +41,40 @@
                {:id id :content content :media media}))))
 
 (r/register-handler
- :ui/set-latch
- (fn [app-state [_ latch? active?]]
-   (if active?
-     (assoc-in app-state [:ui :state :latch] latch?)
-     app-state)))
-
-(r/register-handler
  :ui/activate-latch
  (fn [state [_]]
-   (dispatch [:ui/ignore-next-message-scroll])
    (dispatch [:ui/scroll-to-bottom-if-latched])
    (assoc-in state [:ui :state :latch] true)))
 
 (r/register-handler
- :ui/deactivate-latch
+ :ui/scroll-messages-to-bottom
  (fn [state [_]]
-   (assoc-in state [:ui :state :latch] false)))
+   (scroll-messages-to-bottom)
+   state))
+
+(r/register-handler
+ :ui/scroll-messages-to-bottom-if-latched
+ (fn [state [_]]
+   (when (get-in state [:ui :state :latch])
+     (dispatch [:ui/scroll-messages-to-bottom]))
+   state))
+
+(r/register-handler
+ :ui/message-scroll
+ (fn [state [_]]
+   (if (messages-scrolled-near-bottom? 20)
+     (assoc-in state [:ui :state :latch] true)
+     (assoc-in state [:ui :state :latch] false))))
+
+
+
+
+(comment "probably not needed" 
+
+(r/register-handler
+ :ui/ignore-next-message-scroll
+ (fn [state [_]]
+   (assoc-in state [:ui :state :ignore-message-scroll] true)))
 
 (r/register-handler
  :ui/set-detect-scroll
@@ -65,26 +82,17 @@
    (assoc-in state [:ui :state :detect-scroll] detect)))
 
 (r/register-handler
- :ui/scroll-to-bottom-if-latched
+ :ui/deactivate-latch
  (fn [state [_]]
-   (when (get-in state [:ui :state :latch])
-     (scroll-messages-to-bottom))
-   state))
+   (assoc-in state [:ui :state :latch] false)))
 
 (r/register-handler
- :ui/message-scroll
- (fn [state [_]]
-   (if (messages-scrolled-near-bottom?)
-     (assoc-in state [:ui :state :latch] true)
-     (assoc-in state [:ui :state :latch] false))))
+ :ui/set-latch
+ (fn [app-state [_ latch? active?]]
+   (if active?
+     (assoc-in app-state [:ui :state :latch] latch?)
+     app-state)))
 
-(comment
-   (if (get-in state [:ui :state :ignore-message-scroll])
-     (assoc-in state [:ui :state :ignore-message-scroll] false)
-     (assoc-in state [:ui :state :latch] false)))
+)
 
-(r/register-handler
- :ui/ignore-next-message-scroll
- (fn [state [_]]
-   (assoc-in state [:ui :state :ignore-message-scroll] true)))
 
