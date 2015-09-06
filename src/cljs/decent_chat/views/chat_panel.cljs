@@ -20,7 +20,7 @@
        :border "1em solid white"
        :child
       [rc/button 
-       :on-click #(do(dispatch [:op/send-message @input-value nil])
+       :on-click #(do(dispatch [:op/send-message @input-value])
                      (reset! input-value ""))
        :disabled? @disabled? 
        :style {:color "white"
@@ -55,21 +55,21 @@
              :change-on-blur? false
              :on-change #(reset! value %)]])
 
-(defn filereader-method-handler [files]
-  (println files))
-
 (defn onloadie [e file]
   (let [img (js/Image.)]
     (set! (.-onload img) (fn []
                           (.appendChild (.-body js/document) img)))
-    (set! (.-src img) (.-result (.-target e)))))
+    (set! (.-src img) (.. e -target -result))))
+
+(defn on-file-attach [e file]
+  (dispatch [:file-attach (.. e -target -result) file]))
 
 (defn dropzone-box []
   (reagent/create-class
     {:display-name "dropzone-area"
      :component-did-mount
      #(.setupDrop js/FileReaderJS (reagent/dom-node %) 
-                                  #js{:on #js {:load onloadie}})
+                                  #js{:on #js {:load on-file-attach}})
      :component-did-update
      #(false)
      :reagent-render
@@ -97,7 +97,7 @@
 
 (defn message-item [message]
   [rc/v-box :children [[:h4 (:id message)]
-                       [:p (:content message)]]])
+                       [:p (:text message)]]])
 
 (defn message-panel []
   (let [messages        (subscribe [:messages])

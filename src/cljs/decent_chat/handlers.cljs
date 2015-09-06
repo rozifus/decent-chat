@@ -1,7 +1,7 @@
 (ns decent-chat.handlers
     (:require 
       [re-frame.core :as r :refer [dispatch]]
-      [decent-chat.db :as db]))
+      [decent-chat.db :as db :refer [blank-message]]))
 
 (enable-console-print!)
 
@@ -36,11 +36,18 @@
    db/default-db))
 
 (r/register-handler
+ :op/recv-message
+ (fn [state [_ msg]]
+   (let [id (allocate-next-id (-> state :data :messages))]
+     (assoc-in state [:data :messages id] (assoc msg :id id)))))
+
+(r/register-handler
  :op/send-message
- (fn [app-state [_ content media]]
-   (let [id (allocate-next-id (-> app-state :data :messages))]
-     (assoc-in app-state [:data :messages id] 
-               {:id id :content content :media media}))))
+ (fn [state [_ text]]
+   (let [msg (assoc (get-in state [:ui :state :input]) :text text)]
+     (println msg)
+     (dispatch [:op/recv-message msg])
+     (assoc-in state [:ui :state :input] blank-message))))
 
 (r/register-handler
  :ui/scroll-messages-to-bottom
@@ -62,8 +69,10 @@
      (assoc-in state [:ui :state :latch] true)
      (assoc-in state [:ui :state :latch] false))))
 
-
-
+(r/register-handler
+ :file-attach
+ (fn [state [_ file]]
+   (assoc-in state [:ui :state :input :file] file)))
 
 (comment "probably not needed" 
 
