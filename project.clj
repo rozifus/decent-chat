@@ -33,7 +33,9 @@
                                    :source-map-timestamp true
                                    :foreign-libs [{:provides ["dropzone"] 
                                                    :module-type :amd
-                                                   :file "foreign/dropzone-amd-module-rozifus-modded.js"}]}}
+                                                   :file "foreign/dropzone-amd-module-rozifus-modded.js"}
+                                                  {:provides ["filereader.js"]
+                                                   :file "foreign/filereader.js"}]}}
 
                        {:id "min"
                         :source-paths ["src/cljs"]
