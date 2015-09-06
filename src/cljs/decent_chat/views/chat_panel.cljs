@@ -2,7 +2,8 @@
     (:require 
       [reagent.core :as reagent :refer [atom]]
       [re-frame.core :refer [subscribe dispatch]]
-      [re-com.core :as rc :refer-macros [handler-fn]])
+      [re-com.core :as rc :refer-macros [handler-fn]]
+      dropzone)
     (:require-macros
       [reagent.ratom :refer [reaction]]))
 
@@ -53,6 +54,19 @@
              :change-on-blur? false
              :on-change #(reset! value %)]])
 
+(defn dropzone-box []
+  (reagent/create-class
+    {:display-name "dropzone-area"
+     :component-did-mount
+     #(js/Dropzone. "#file-dropzone" #js{:url "/file/post"})
+     :component-did-update
+     #(false)
+     :reagent-render
+     (fn [] 
+       [rc/box 
+        :size "auto"
+        :child [:div#file-dropzone]])}))
+
 (defn input-panel []
   (let [input-value (atom "")]
     (fn []
@@ -60,7 +74,8 @@
        :size "0 0 6em" 
        :align :end
        :justify :end
-       :children [[input-box input-value]
+       :children [[dropzone-box]
+                  [input-box input-value]
                   [input-buttons input-value]]])))
 
 ;;;;;;;;;;;;;;;;;;;

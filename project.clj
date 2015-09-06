@@ -30,7 +30,10 @@
                                    :output-to "resources/public/js/compiled/app.js"
                                    :output-dir "resources/public/js/compiled/out"
                                    :asset-path "js/compiled/out"
-                                   :source-map-timestamp true}}
+                                   :source-map-timestamp true
+                                   :foreign-libs [{:provides ["dropzone"] 
+                                                   :module-type :amd
+                                                   :file "foreign/dropzone-amd-module-rozifus-modded.js"}]}}
 
                        {:id "min"
                         :source-paths ["src/cljs"]
