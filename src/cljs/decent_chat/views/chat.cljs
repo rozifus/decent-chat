@@ -1,10 +1,10 @@
-(ns decent-chat.views.chat-panel
+(ns decent-chat.views.chat
     (:require 
       [cljs.core :refer [js-obj]]
       [reagent.core :as reagent :refer [atom]]
       [re-frame.core :refer [subscribe dispatch]]
       [re-com.core :as rc :refer-macros [handler-fn]]
-      [filereader.js :as filereader])
+      [decent-chat.views.filereader :refer [filereader-box]])
     (:require-macros
       [reagent.ratom :refer [reaction]]))
 
@@ -55,31 +55,6 @@
              :change-on-blur? false
              :on-change #(reset! value %)]])
 
-(defn onloadie [e file]
-  (let [img (js/Image.)]
-    (set! (.-onload img) (fn []
-                          (.appendChild (.-body js/document) img)))
-    (set! (.-src img) (.. e -target -result))))
-
-(defn on-file-attach [e file]
-  (dispatch [:file-attach (.. e -target -result) file]))
-
-(defn dropzone-box []
-  (reagent/create-class
-    {:display-name "dropzone-area"
-     :component-did-mount
-     #(.setupDrop js/FileReaderJS (reagent/dom-node %) 
-                                  #js{:on #js {:load on-file-attach}})
-     :component-did-update
-     #(false)
-     :reagent-render
-     (fn [] 
-       [rc/box 
-        :size "auto"
-        :child [rc/alert-box 
-                :class "file-dropzone"
-                :alert-type :info]])}))
-                
 (defn input-panel []
   (let [input-value (atom "")]
     (fn []
@@ -87,7 +62,7 @@
        :size "0 0 6em" 
        :align :end
        :justify :end
-       :children [[dropzone-box]
+       :children [[filereader-box]
                   [input-box input-value]
                   [input-buttons input-value]]])))
 

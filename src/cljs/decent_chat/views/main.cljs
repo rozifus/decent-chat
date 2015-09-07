@@ -3,7 +3,7 @@
       [reagent.core :as reagent :refer [atom]]
       [re-frame.core :refer [subscribe dispatch]]
       [re-com.core :as rc :refer-macros [handler-fn]]
-      [decent-chat.views.chat-panel :refer [chat-panel]])
+      [decent-chat.views.chat :refer [chat-panel]])
     (:require-macros
       [reagent.ratom :refer [reaction]]))
 
