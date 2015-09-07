@@ -71,8 +71,9 @@
 
 (r/register-handler
  :file-attach
- (fn [state [_ file]]
-   (assoc-in state [:ui :state :input :file] file)))
+ (fn [state [_ result file]]
+   (println (str result ":" file))
+   (assoc-in state [:ui :state :input :file] result)))
 
 
 

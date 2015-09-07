@@ -70,8 +70,34 @@
 ;; Message Panel ;;
 ;;;;;;;;;;;;;;;;;;;
 
+(defn media-item [message]
+  (let [expanded (atom false)]
+    (fn [message]
+      [rc/box 
+       :size "0 1 auto"
+       :attr {:on-click (handler-fn (swap! expanded not))}
+       :child [rc/box :size "auto"
+               :child 
+                    
+       [:img 
+               {:src (:file message)}
+               ]]]))) 
+
+(defn image-item [message]
+  (let [expanded (atom false)]
+    (fn [message]
+      [:img 
+       {:src (:file message)
+        :on-click (handler-fn (swap! expanded not))
+        :style { :max-width (if @expanded "100%" "200px")
+                 :margin "0 auto 0 0" }
+        }])))
+
+
 (defn message-item [message]
-  [rc/v-box :children [[:h4 (:id message)]
+  [rc/v-box :children [[rc/line]
+                       (if (:file message) [image-item message])
+                       [:h4 (:id message)]
                        [:p (:text message)]]])
 
 (defn message-panel []
