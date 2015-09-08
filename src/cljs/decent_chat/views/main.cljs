@@ -24,8 +24,7 @@
     [rc/h-box 
      :size "1 1 auto"
      :justify :end
-     :children [[rc/gap :size "1em"]
-                [chat-panel]
+     :children [[chat-panel]
                 [sidebar-panel]]]))
 
 (defn header-title []
@@ -49,6 +48,11 @@
      :align :end
      :children [[footer-text]]]))
 
+(defn suppress-event [e] 
+  (println "depr")
+  (.stopPropagation e)
+  (.preventDefault e))
+
 (defn app-panel []
   (fn []
     [rc/v-box 
@@ -56,6 +60,8 @@
      :height "100%"
      :width "100%"
      :align-self :end
+     :attr {:on-drag-over  suppress-event
+            :on-drag-enter suppress-event}
      :children [[header-panel]
                 [main-panel]
                 [footer-panel]]]))
