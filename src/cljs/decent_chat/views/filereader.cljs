@@ -52,20 +52,50 @@
     :child [:p {:style {:font-size "6em"
                         :line-height "0px"
                         :margin "0px"}} text]])
- 
-(defn file-placeholder []
-   [rc/box 
-    :justify :center
-    :align :center
-    :style {:margin "auto"
-            :width "100%"
-            :height "100%"
-            :color "#cceeff"
-            :border "2px dashed #eeeeff"
-            :background "#fdfeff"}
-    :child [:p {:style {:font-size "6em"
-                        :line-height "0px"
-                        :margin "0px"}} "+"]])
+
+(defn file-placeholder-input [file-input-id]
+  (reagent/create-class
+    {:display-name "file-placeholder"
+     :component-did-mount
+     #(setup-file-input (reagent/dom-node %))
+     :component-did-update
+     #(setup-file-input (reagent/dom-node %))
+     :reagent-render
+     (fn []
+       [:input {
+          :type "file"
+          :id file-input-id 
+          :style {
+            :display "none"
+            :opacity "0"
+            :padding "0px"
+            :margin "0px"
+            :width "0px"
+            :height "0px"
+            }}])}))
+
+(defn file-placeholder-visual []
+  (let [file-input-id "file-input"]
+    [rc/v-box 
+     :justify :center
+     :align   :center
+     :attr {:on-click (handler-fn (.click (.getElementById js/document file-input-id)))}
+     :style {:-webkit-touch-callout "none"
+             :-webkit-user-select "none"
+             :-kthml-user-select "none"
+             :-moz-user-select "none"
+             :-ms-user-select "none"
+             :user-select "none"
+             :margin "auto"
+             :width "100%"
+             :height "100%"
+             :color "#cceeff"
+             :border "2px dashed #eeeeff"
+             :background "#fdfeff"}
+     :children [[file-placeholder-input file-input-id]
+                [:p {:style {:font-size "7em"
+                             :line-height "0px"
+                             :margin "0px"}} "+"]]]))
 
 (defn file-display [hover upload-item]
   (fn []
@@ -97,5 +127,5 @@
           :attr {:on-mouse-over (handler-fn (reset! hover true))
                  :on-mouse-out  (handler-fn (reset! hover false))}
           :child (if (nil? @upload-item)
-                   [file-placeholder]
+                   [file-placeholder-visual]
                    [file-display hover upload-item])])})))
