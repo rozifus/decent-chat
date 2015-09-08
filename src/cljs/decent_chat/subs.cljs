@@ -11,3 +11,8 @@
  :ui/latch
  (fn [db]
    (reaction (get-in @db [:ui :state :latch]))))
+
+(re-frame/register-sub
+ :upload-item
+ (fn [db]
+   (reaction (get-in @db [:ui :state :input :file]))))

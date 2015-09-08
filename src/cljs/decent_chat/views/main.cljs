@@ -49,7 +49,6 @@
      :children [[footer-text]]]))
 
 (defn suppress-event [e] 
-  (println "depr")
   (.stopPropagation e)
   (.preventDefault e))
 

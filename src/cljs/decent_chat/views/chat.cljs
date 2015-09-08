@@ -4,7 +4,7 @@
       [reagent.core :as reagent :refer [atom]]
       [re-frame.core :refer [subscribe dispatch]]
       [re-com.core :as rc :refer-macros [handler-fn]]
-      [decent-chat.views.filereader :refer [filereader-box]])
+      [decent-chat.views.filereader :refer [file-box]])
     (:require-macros
       [reagent.ratom :refer [reaction]]))
 
@@ -16,10 +16,11 @@
   (let [hover? (atom false)
         disabled? (reaction (= "" (clojure.string/trim @input-value)))]
     (fn [input-value]
-      [rc/border 
-       :border "1em solid white"
+      [rc/box
+       :size "auto"
        :child
       [rc/button 
+       :style {:width "10em"}
        :on-click #(do(dispatch [:op/send-message @input-value])
                      (reset! input-value ""))
        :disabled? @disabled? 
@@ -32,16 +33,17 @@
 (defn latch-button []
   (let [disabled? (subscribe [:ui/latch])]
     (fn []
-      [rc/border
-       :border "1em solid white"
-       :child [rc/button
-                :on-click #(do(dispatch [:ui/scroll-messages-to-bottom]))
-                :disabled? (reaction @disabled?) 
-                :label "Latch"]])))
+       [rc/button
+        :style {:width "5em"}
+
+        :on-click #(do(dispatch [:ui/scroll-messages-to-bottom]))
+        :disabled? (reaction @disabled?) 
+        :label "Latch"])))
 
 (defn input-buttons [input-value]
   [rc/v-box 
    :justify :end
+   :width "5em"
    :children [[latch-button]
               [send-button input-value]]])
 
@@ -59,10 +61,11 @@
   (let [input-value (atom "")]
     (fn []
       [rc/h-box 
-       :size "0 0 6em" 
+       :size "0 0 10em" 
+       :padding "1em"
        :align :end
        :justify :end
-       :children [[filereader-box]
+       :children [[file-box]
                   [input-box input-value]
                   [input-buttons input-value]]])))
 
@@ -89,15 +92,15 @@
       [:img 
        {:src (:file message)
         :on-click (handler-fn (swap! expanded not))
-        :style { :max-width (if @expanded "100%" "200px")
+        :style { :max-width (if @expanded "100%" "100px")
                  :margin "0 auto 0 0" }
         }])))
 
 
 (defn message-item [message]
   [rc/v-box :children [[rc/line]
-                       (if (:file message) [image-item message])
                        [:h4 (:id message)]
+                       (if (:file message) [image-item message])
                        [:p (:text message)]]])
 
 (defn message-panel []
@@ -115,6 +118,7 @@
          [rc/scroller 
           :v-scroll :auto 
           :size "auto" 
+          :padding "1em"
           :class "message-scroller"
           :attr { :on-scroll #(dispatch [:ui/message-scroll])}
           :child [rc/v-box 
@@ -129,7 +133,7 @@
   (fn []
      [rc/v-box 
       :size "auto"
-      :children [[message-panel]
+          :children [[message-panel]
                  [input-panel]]]))
 
 

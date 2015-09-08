@@ -72,8 +72,12 @@
 (r/register-handler
  :file-attach
  (fn [state [_ result file]]
-   (println (str result ":" file))
    (assoc-in state [:ui :state :input :file] result)))
+
+(r/register-handler
+ :file-detach
+ (fn [state [_]]
+   (assoc-in state [:ui :state :input :file] nil)))
 
 
 
