@@ -3,7 +3,8 @@
       [reagent.core :as reagent :refer [atom]]
       [re-frame.core :refer [subscribe dispatch]]
       [re-com.core :as rc :refer-macros [handler-fn]]
-      [decent-chat.views.chat :refer [chat-panel]])
+      [decent-chat.views.chat :refer [chat-panel]]
+      [decent-chat.util :refer [suppress-event]])
     (:require-macros
       [reagent.ratom :refer [reaction]]))
 
@@ -47,10 +48,6 @@
      :justify :center
      :align :end
      :children [[footer-text]]]))
-
-(defn suppress-event [e] 
-  (.stopPropagation e)
-  (.preventDefault e))
 
 (defn app-panel []
   (fn []
